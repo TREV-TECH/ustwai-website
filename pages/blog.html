@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ustawi Organic Farms</title>
+    <link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/faq.css">
+</head>
+<body>
+
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Email -->
+      <div class="header__email">Email: info@ustawiorganicfarms.org</div>
+      <!-- Social Media Icons -->
+      <ul class="social-icons">
+        <li>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+      <div class="logo">
+        <img src="../assets/images/logo.jpg" alt="Ustawi Organic Farms Logo" />
+      </div>
+      <div class="nav-items">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./product.html">Products</a></li>
+          <li><a href="./contact.html">Contact us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="container-abt">
+      <div class="big-text">OUR BLOG</div>
+      <div class="small-text">Home / Blog</div>
+    </div>
+
+
+
+    <div class="vid-container">
+      <video width="960" height="540" controls autoplay muted>
+        <source src="../assets/ogfarm.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    
+
+    <style>
+      .vid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Make the container take up the full viewport height */
+}
+
+.vid-container video {
+  width: 80%; /* Make the video 80% of the container's width */
+  height: auto; /* Let the height adjust proportionally */
+}
+
+    </style>
+
+
+
+
+    <h1>Frequently Asked Questions</h1>
+    <div class="faq-container">
+        <div class="faq active">
+            <h3 class="faq-title">
+                Do Hooks cover all use cases for classes?
+            </h3>
+            <p class="faq-text">
+                Our goal is for Hooks to cover all use cases for classes as soon as possible. There are no Hook equivalents to the uncommon getSnapshotBeforeUpdate, getDerivedStateFromError and componentDidCatch lifecycles yet, but we plan to add them soon.   
+            </p>
+            <button class="faq-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="faq">
+            <h3 class="faq-title">
+                Do I need to rewrite all my class components?
+            </h3>
+            <p class="faq-text">
+                No. There are no plans to remove classes from React — we all need to keep shipping products and can’t afford rewrites. We recommend trying Hooks in new code.
+            </p>
+            <button class="faq-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="faq">
+            <h3 class="faq-title">
+                Can I make a ref to a function component?
+            </h3>
+            <p class="faq-text">
+                While you shouldn’t need this often, you may expose some imperative methods to a parent component with the useImperativeHandle Hook. 
+            </p>
+            <button class="faq-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="faq">
+            <h3 class="faq-title">
+                How can I measure a DOM node?
+            </h3>
+            <p class="faq-text">
+                One rudimentary way to measure the position or size of a DOM node is to use a callback ref. React will call that callback whenever the ref gets attached to a different node.    
+            </p>
+            <button class="faq-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="faq">
+            <h3 class="faq-title">
+                Can I skip an effect on updates?
+            </h3>
+            <p class="faq-text">
+                Yes. See conditionally firing an effect. Note that forgetting to handle updates often introduces bugs, which is why this isn’t the default behavior.  
+            </p>
+            <button class="faq-toggle">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    <script>
+const toggles = document.querySelectorAll('.faq-toggle')
+toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        toggle.parentNode.classList.toggle('active')
+    })
+})
+    </script>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="slide">  
+  
+  
+    <div class="unique-card box">
+      <img
+        class="unique-card-img2"
+        src="../assets/images/3d-leaf.png"
+        alt="Image 1"
+      />
+      <div class="unique-card-content">
+        <div class="unique-name">John Doe</div>
+        <div class="unique-role">CEO</div>
+        <div class="unique-role">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla enim
+          eligendi numquam. Blanditiis, repellat cumque sequi accusantium
+          suscipit totam odio veritatis deserunt saepe a exercitationem
+          dolorum, distinctio voluptatum harum necessitatibus.
+        </div>
+      </div>
+    </div>
+
+    <div class="unique-card box">
+      <img
+        class="unique-card-img2"
+        src="../assets/images/organic.png"
+        alt="Image 1"
+      />
+      <div class="unique-card-content">
+        <div class="unique-name">John Doe</div>
+        <div class="unique-role">CEO</div>
+        <div class="unique-role">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla enim
+          eligendi numquam. Blanditiis, repellat cumque sequi accusantium
+          suscipit totam odio veritatis deserunt saepe a exercitationem
+          dolorum, distinctio voluptatum harum necessitatibus.
+        </div>
+      </div>
+    </div>
+
+    <div class="unique-card box">
+      <img
+        class="unique-card-img2"
+        src="../assets/images/regenerative.png"
+        alt="Image 1"
+      />
+      <div class="unique-card-content">
+        <div class="unique-name">John Doe</div>
+        <div class="unique-role">CEO</div>
+        <div class="unique-role">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla enim
+          eligendi numquam. Blanditiis, repellat cumque sequi accusantium
+          suscipit totam odio veritatis deserunt saepe a exercitationem
+          dolorum, distinctio voluptatum harum necessitatibus.
+        </div>
+      </div>
+    </div>
+
+    <div class="unique-card box">
+      <img
+        class="unique-card-img2"
+        src="../assets/images/sprout.png"
+        alt="Image 1"
+      />
+      <div class="unique-card-content">
+        <div class="unique-name">John Doe</div>
+        <div class="unique-role">CEO</div>
+        <div class="unique-role">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla enim
+          eligendi numquam. Blanditiis, repellat cumque sequi accusantium
+          suscipit totam odio veritatis deserunt saepe a exercitationem
+          dolorum, distinctio voluptatum harum necessitatibus.
+        </div>
+      </div>
+    </div>
+
+    <div class="unique-card box">
+      <img
+        class="unique-card-img2"
+        src="../assets/images/sprouttwo.png"
+        alt="Image 1"
+      />
+      <div class="unique-card-content">
+        <div class="unique-name">John Doe</div>
+        <div class="unique-role">CEO</div>
+        <div class="unique-role">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla enim
+          eligendi numquam. Blanditiis, repellat cumque sequi accusantium
+          suscipit totam odio veritatis deserunt saepe a exercitationem
+          dolorum, distinctio voluptatum harum necessitatibus.
+        </div>
+      </div>
+    </div>
+
+    <div class="unique-card box">
+      <img
+        class="unique-card-img2"
+        src="../assets/images/shovel.png"
+        alt="Image 1"
+      />
+      <div class="unique-card-content">
+        <div class="unique-name">John Doe</div>
+        <div class="unique-role">CEO</div>
+        <div class="unique-role">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla enim
+          eligendi numquam. Blanditiis, repellat cumque sequi accusantium
+          suscipit totam odio veritatis deserunt saepe a exercitationem
+          dolorum, distinctio voluptatum harum necessitatibus.
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<script>
+  const boxes = document.querySelectorAll('.box')
+
+window.addEventListener('scroll', checkBoxes)
+
+checkBoxes()
+
+
+function checkBoxes() {
+    const triggerBottom = window.innerHeight / 5 * 4
+
+    boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top
+
+
+        if(boxTop < triggerBottom){
+            box.classList.add('show')
+        }else{
+            box.classList.remove('show')
+        }
+
+
+    })
+}
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const boxes = document.querySelectorAll('.box');
+
+  boxes.forEach(box => {
+    const content = box.querySelector('.content');
+    const button = box.querySelector('.view-more');
+
+    button.addEventListener('click', () => {
+      content.classList.toggle('show-more');
+      if (content.classList.contains('show-more')) {
+        button.textContent = 'View Less';
+      } else {
+        button.textContent = 'View More';
+      }
+    });
+  });
+});
+
+</script>
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-background">
+      <div class="footer-columns">
+        <!-- Quick Links -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <!-- Add more quick links as needed -->
+          </ul>
+        </div>
+        
+        <!-- Other Pages -->
+        <div class="footer-column">
+          <h3>Other Pages</h3>
+          <ul>
+            <li><a href="#">News and Media</a></li>
+            <li><a href="#">Laboratory</a></li>
+            <li><a href="#">FAQ</a></li>
+            <!-- Add more pages as needed -->
+          </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="footer-column">
+          <h3>Contact Info</h3>
+          <ul>
+            <li><i class="fas fa-envelope"></i> info@ustawiorganicfarms.org</li>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Farm Road, City, Country</li>
+            <li><i class="fas fa-phone-alt"></i> +1234567890</li>
+          </ul>
+        </div>
+        
+        <!-- Free Consultation -->
+        <div class="footer-column">
+          <h3>Free Consultation</h3>
+          <p>Let us cultivate success together through personalized advice and strategic insights for your agricultural ventures.</p>
+          <br>
+          <a href="#" class="btn light-green">Contact Us Now</a>
+        </div>
+      </div>
+      
+      <!-- Divider -->
+      <hr class="footer-divider">
+      
+      <!-- Company Logo -->
+      <div class="company-logo">
+        <img src="../assets/images/logo.jpg" alt="Ustawi Organic Farms Logo" />
+      </div>
+      
+      <!-- Copyright -->
+      <div class="copyright">
+        <p>&copy; 2024 Ustawi Organic Farms. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+<script
+  src="https://kit.fontawesome.com/baa6fea956.js"
+  crossorigin="anonymous"
+></script>
+<script src="./js/script.js"></script>
+</html>

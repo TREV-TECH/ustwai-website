@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ustawi Organic Farms</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Email -->
+      <div class="header__email">Email: info@ustawiorganicfarms.org</div>
+      <!-- Social Media Icons -->
+      <ul class="social-icons">
+        <li>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+      <div class="logo">
+        <img src="../assets/images/logo.jpg" alt="Ustawi Organic Farms Logo" />
+      </div>
+      <div class="nav-items">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./product.html">Products</a></li>
+          <li><a href="./contact.html">Contact us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-abt">
+      <div class="big-text">CONTACT US</div>
+      <div class="small-text">Home / Contact Us</div>
+    </div>
+
+    <div class="container">
+      <div class="card-contact">
+        <h2>Contact Us</h2>
+        <p>
+          123 Main Street,<br />
+          City, Country
+        </p>
+      </div>
+
+      <div class="card-contact">
+        <h2>Call Us</h2>
+        <p>Phone: +1234567890<br />Mobile: +9876543210</p>
+      </div>
+
+      <div class="card-contact">
+        <h2>Mail Us</h2>
+        <p>Email: info@example.com<br />Contact: contact@example.com</p>
+      </div>
+    </div>
+
+    <div class="contact-us">
+      <div class="container-contact">
+        <h1>Send Us a Message</h1>
+        <img src="../assets/images/logo.jpg" alt="Icon" class="blur-icon" />
+        <form action="#" method="POST">
+          <div class="form-row">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              class="form-input"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              class="form-input"
+            />
+          </div>
+          <div class="form-row">
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              class="form-input"
+            />
+            <input
+              type="text"
+              name="phone"
+              placeholder="Your Phone"
+              class="form-input"
+            />
+          </div>
+          <textarea
+            name="message"
+            rows="6"
+            placeholder="Your Message"
+          ></textarea>
+          <button type="submit" class="send-button">Send</button>
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5yuGpb1Cwpg8vuRlz9aeYcvcquvLsVkw"></script>
+        <script>
+          function initMap() {
+            // Define the location to center the map
+            var myLatLng = {lat: -0.0723779, lng: 34.7013261};
+    
+            // Create a map object and set the center and zoom level
+            var map = new google.maps.Map(document.getElementById('map'), {
+              center: myLatLng,
+              zoom: 12
+            });
+    
+            // Add a marker to the map
+            var marker = new google.maps.Marker({
+              position: myLatLng,
+              map: map,
+              title: 'Otonglo'
+            });
+          }
+        </script>
+      </head>
+      <body onload="initMap()">
+        <div id="map" style="height: 500px; width: 100%;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-background">
+        <div class="footer-columns">
+          <!-- Quick Links -->
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <!-- Add more quick links as needed -->
+            </ul>
+          </div>
+
+          <!-- Other Pages -->
+          <div class="footer-column">
+            <h3>Other Pages</h3>
+            <ul>
+              <li><a href="#">News and Media</a></li>
+              <li><a href="#">Laboratory</a></li>
+              <li><a href="#">FAQ</a></li>
+              <!-- Add more pages as needed -->
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-column">
+            <h3>Contact Info</h3>
+            <ul>
+              <li>
+                <i class="fas fa-envelope"></i> info@ustawiorganicfarms.org
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Farm Road, City,
+                Country
+              </li>
+              <li><i class="fas fa-phone-alt"></i> +1234567890</li>
+            </ul>
+          </div>
+
+          <!-- Free Consultation -->
+          <div class="footer-column">
+            <h3>Free Consultation</h3>
+            <p>
+              Let us cultivate success together through personalized advice and
+              strategic insights for your agricultural ventures.
+            </p>
+            <br />
+            <a href="#" class="btn light-green">Contact Us Now</a>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <hr class="footer-divider" />
+
+        <!-- Company Logo -->
+        <div class="company-logo">
+          <img
+            src="../assets/images/logo.jpg"
+            alt="Ustawi Organic Farms Logo"
+          />
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+          <p>&copy; 2024 Ustawi Organic Farms. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/baa6fea956.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./js/script.js"></script>
+</html>
