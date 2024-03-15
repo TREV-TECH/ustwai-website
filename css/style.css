@@ -66,7 +66,7 @@ html {
     align-items: flex-start;
     padding: 10px;
   }
-  
+
   .social-icons {
     margin-top: 10px;
   }
@@ -78,17 +78,6 @@ html {
     flex-direction: row;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* Navigation styles */
 .navigation {
@@ -115,19 +104,12 @@ html {
   margin-right: 40px;
 }
 
-
-
 .nav-items ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-
-
-
-
-/* Carousel styles */
 .carousel-container {
   position: relative;
   width: 100%;
@@ -190,19 +172,35 @@ html {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
+  .overlay {
+    width: 80%; /* Adjust overlay width for smaller screens */
+    max-width: none; /* Reset max-width */
+    left: 50%; /* Center the overlay horizontally */
+    transform: translateX(-50%) translateY(-50%); /* Adjust for centering */
   }
-  .social-icons {
-    margin-top: 10px;
+
+  .carousel-slide {
+    width: 100%; /* Display images stacked for smaller screens */
   }
+
+  .buttons {
+    flex-direction: column; /* Change to column layout for smaller screens */
+    align-items: center; /* Center align buttons */
+    margin-top: 20px;
+  }
+
+  .btn {
+    margin-bottom: 10px; /* Add margin between buttons */
+}
 }
 
-/* CSS for the new section */
+
+
+
+
 .new-section {
   background-color: #50c878;
-  padding: 120px;
+  padding: 120px; /* Default padding for big screens */
 }
 
 /* Content layout within the section */
@@ -228,26 +226,80 @@ html {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-    text-align: center;
+  .new-section {
+    padding: 60px; /* Reduce padding for mobile and small screens */
   }
-  .image,
+  
+  /* Content layout adjustments */
+  .content {
+    flex-direction: column; /* Change to column layout for mobile and small screens */
+    text-align: center; /* Center text */
+  }
+  
+  /* Image style adjustments */
+  .image img {
+    max-width: 100%; /* Adjust image width for mobile and small screens */
+    margin-bottom: 20px; /* Add margin below image for spacing */
+  }
+  
+  /* Text style adjustments */
   .text {
-    width: 100%;
+    font-size: medium; /* Adjust font size for mobile and small screens */
+    margin-right: 0; /* Remove right margin */
   }
 }
+
+
+
+
 
 .new-section2 {
   background-color: whitesmoke;
-  padding: 120px;
+  padding: 120px; /* Default padding for large screens */
 }
 
+/* Content layout within the section */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Text style */
 .text2 {
   color: black;
   font-size: large;
+  /* Maintain margin-right for large screens */
   margin-right: 500px;
 }
+
+/* Image style */
+.image img {
+  max-width: 70%;
+  height: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .new-section2 {
+    padding: 60px; /* Reduce padding for mobile and small screens */
+  }
+  
+  /* Content layout adjustments */
+  .content {
+    flex-direction: column; /* Change to column layout for mobile and small screens */
+    text-align: center; /* Center text */
+  }
+  
+  /* Text style adjustments */
+  .text2 {
+    font-size: medium; /* Adjust font size for mobile and small screens */
+    margin-right: 0; /* Remove right margin for mobile and small screens */
+  }
+}
+
+
+
 
 .who-we-are {
   position: relative;
@@ -338,14 +390,33 @@ html {
   .card-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+
+  .card {
+    margin-bottom: 20px; /* Adding margin bottom for spacing on small screens */
+  }
+
+  .card:hover {
+    background-color: initial; /* Removing hover background color on small screens */
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* Footer styles */
 .footer {
   background-color: #8b4513; /* Brown color */
   color: white;
-  /* padding: 20px; */
   border-radius: 50px 50px 0px 0px;
+  padding: 20px;
 }
 
 .footer-background {
@@ -409,6 +480,43 @@ html {
 .copyright {
   text-align: center;
 }
+
+/* Media queries for small screens */
+@media (max-width: 768px) {
+  .footer {
+    border-radius: 0;
+  }
+  
+  .footer-columns {
+    flex-direction: column;
+  }
+  
+  .footer-column {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-background {
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* abiut us page */
 
@@ -602,38 +710,113 @@ html {
   .unique-card {
     width: 100%;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+/* For small screens and mobile phones */
+@media (max-width: 768px) {
+  .container-abt,
+  .container-service {
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .header-abt,
+  .content-abt {
+    width: 100%;
+  }
+
+  .container-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .green-card{
+    margin: 10px;
+    width: 410px;
+  }
+
+  .unique-card-img,
+  .unique-card-img2 {
+    height: auto;
+    max-height: 200px;
+  }
+
+.section-abt{
+    overflow: hidden;
+    display: block;
+  }
+
+
+
+  .header-abt img {
+    width: 100%;
+}
 }
 
-.conter {
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+.counter-wrapper {
   background-color: #50c878;
   color: #8b4513;
   font-family: "Roboto Mono", sans-serif;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  height: 20vh;
-  margin: 0;
+  align-items: center;
+  height: auto;
+  padding: 20px;
   font-weight: bolder;
 }
 
 .counter-container {
+  flex: 0 1 45%;
+  max-width: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 30px 50px;
+  margin: 10px;
   text-align: center;
 }
 
 .counter {
-  font-size: 60px;
+  font-size: 40px;
   margin-top: 10px;
 }
 
 @media (max-width: 580px) {
-  body {
-    flex-direction: column;
+  .counter-container {
+    flex: 0 1 100%;
+    max-width: none;
   }
 }
+
+
+
+
+
+
 
 #team-text {
   color: green; /* Green color */
@@ -733,6 +916,8 @@ html {
     display: none;
   }
 }
+
+
 
 .main-container {
   text-align: center;
@@ -915,7 +1100,24 @@ textarea {
   .form-input {
     width: 100%;
   }
+
+  .items-container {
+    display: block;
+
+  }
+  .slide{
+    display: block;
+  }
+
+  .box {
+    width: calc(100.33% - 20px);
 }
+
+.contact-page{
+  overflow: hidden;
+}
+}
+
 
 .container {
   display: flex;
