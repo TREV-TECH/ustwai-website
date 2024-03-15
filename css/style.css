@@ -85,6 +85,10 @@ html {
   padding: 10px 20px;
 }
 
+.logo{
+  border-radius: 50%;
+}
+
 .bg-light-brown {
   background-color: #d2b48c; /* Light brown color */
 }
