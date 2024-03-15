@@ -281,12 +281,12 @@ html {
   min-height: 700px;
   display: flex;
   align-items: center;
-  padding: 50px;
+  /* padding: 50px; */
   margin-top: 12px;
 }
 
 .background-overlay {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
@@ -297,6 +297,7 @@ html {
 .content-wh {
   text-align: center;
   z-index: 1;
+  margin-bottom: 30px;
 }
 
 .content-wh h1 {
@@ -314,7 +315,7 @@ html {
   padding: 0 20px;
 }
 
-.card {
+.card-who-we-are {
   background-color: white;
   padding: 20px;
   border-radius: 50px 0px 50px 0px;
@@ -326,24 +327,24 @@ html {
   align-items: center;
 }
 
-.card .icon {
+.card-who-we-are .icon {
   margin-right: 20px;
 }
 
-.card .icon img {
+.card-who-we-are .icon img {
   width: 50px;
   height: auto;
 }
 
-.card:hover {
+.card-who-we-are:hover {
   background-color: lightgreen;
 }
 
-.card h3 {
+.card-who-we-are h3 {
   color: #333;
 }
 
-.card p {
+.card-who-we-are p {
   color: #666;
 }
 
@@ -363,11 +364,11 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  .card {
+  .card-who-we-are {
     margin-bottom: 20px; /* Adding margin bottom for spacing on small screens */
   }
 
-  .card:hover {
+  .card-who-we-are:hover {
     background-color: initial; /* Removing hover background color on small screens */
   }
 }
@@ -655,7 +656,7 @@ html {
   }
 
   /* For small screens and mobile phones */
-  @media (max-width: 768px) {
+  @media (max-width: 890px) {
     .container-abt,
     .container-service {
       height: 300px;
@@ -680,7 +681,7 @@ html {
     .unique-card-img,
     .unique-card-img2 {
       height: auto;
-      max-height: 200px;
+      /* max-height: 200px; */
     }
 
     .section-abt {
