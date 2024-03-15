@@ -79,6 +79,7 @@ html {
   }
 }
 
+
 /* Navigation styles */
 .navigation {
   background-color: #d2b48c; /* Light brown color */
@@ -404,7 +405,6 @@ html {
   background-color: #8b4513; /* Brown color */
   color: white;
   border-radius: 50px 50px 0px 0px;
-  padding: 20px;
 }
 
 .footer-background {
@@ -935,7 +935,6 @@ html {
   color: #8b4513; /* Dark brown */
   font-weight: bold;
   font-size: 34px;
-  padding: 40px;
 }
 
 .light-brown {
@@ -1025,6 +1024,7 @@ html {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .container-contact {
