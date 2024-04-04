@@ -26,6 +26,10 @@ html {
 * {
   box-sizing: border-box;
 }
+/* 
+.frass{
+  display: block;
+} */
 
 /* Header styles */
 .header {
@@ -593,8 +597,8 @@ html {
   width: calc(33.33% - 20px);
   margin-bottom: 20px;
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* border-radius: 8px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
 }
@@ -610,6 +614,7 @@ html {
   height: 532px; /* Adjust according to your design */
   object-fit: cover;
   object-position: center;
+  border-radius: 50%;
 }
 
 /* Style for the card image */
@@ -618,6 +623,7 @@ html {
   height: 100px; /* Adjust according to your design */
   object-fit: cover;
   object-position: center;
+  border-radius: 50%;
 }
 
 /* Style for the card content */
