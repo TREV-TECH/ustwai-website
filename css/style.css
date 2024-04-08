@@ -589,7 +589,7 @@ html {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 10px auto;
-  max-width: 1500px; /* Adjust according to your design */
+  max-width: 1500px;
 }
 
 /* Style for each card */
@@ -597,8 +597,6 @@ html {
   width: calc(33.33% - 20px);
   margin-bottom: 20px;
   background-color: #fff;
-  /* border-radius: 8px; */
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
 }
@@ -608,21 +606,17 @@ html {
   transform: translateY(-5px);
 }
 
-/* Style for the card image */
-.unique-card-img {
-  width: 100%;
-  height: 532px; /* Adjust according to your design */
-  object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
+/* Style for the card image container */
+.unique-card-img-container {
+  text-align: center;
 }
 
 /* Style for the card image */
-.unique-card-img2 {
-  width: 50%;
-  height: 100px; /* Adjust according to your design */
+.unique-card-img {
+  width: 150px;
+  height: 150px;
   object-fit: cover;
-  object-position: center;
+  object-position: top center; /* Align image to top center */
   border-radius: 50%;
 }
 
@@ -645,20 +639,34 @@ html {
   font-size: 16px;
 }
 
+.unique-description {
+  color: #333333;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.unique-card-img2 {
+  width: 50%;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
 /* Media query for responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .unique-card {
     width: calc(50% - 20px);
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 900px) {
   .unique-card {
     width: 100%;
   }
 
   /* For small screens and mobile phones */
-  @media (max-width: 890px) {
+  @media (max-width: 900px) {
     .container-abt,
     .container-service {
       height: 300px;
