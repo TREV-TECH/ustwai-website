@@ -3,385 +3,411 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ustawi Organic Farms</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon_io/android-chrome-192x192.png">
+    <title>Our Services - Ustawi Organic Farms</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/images/favicon_io/android-chrome-192x192.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
-
   <body>
     <!-- Header -->
     <header class="header">
-      <!-- Email -->
-      <div class="header__email">Email: info@ustawiorganicfarms.org</div>
-      <!-- Social Media Icons -->
-      <ul class="social-icons">
-        <li>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </li>
-      </ul>
-    </header>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light-brown">
-      <a class="navbar-brand" href="#">
-        <img
-          src="../assets/images/logo.jpg"
-          width="60"
-          height="60"
-          class="d-inline-block align-top logo"
-          alt="Your Logo"
-        />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div
-        class="collapse navbar-collapse justify-content-center"
-        id="navbarNav"
-      >
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link white-text" href="../index.html"
-              >Home <span class="sr-only">(current)</span></a
-            >
+      <div class="header-content">
+        <div class="header-email">
+          <i class="fas fa-envelope"></i>
+          info@ustawiorganicfarms.org
+        </div>
+        <ul class="social-icons">
+          <li>
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link white-text" href="../pages/about.html">About</a>
+          <li>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link white-text" href="../pages/services.html"
-              >Services</a
-            >
+          <li>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link white-text" href="../pages/blog.html">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link white-text" href="../pages/product.html"
-              >Products</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link white-text" href="../pages/contact.html"
-              >Contact us</a
-            >
+          <li>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
           </li>
         </ul>
       </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.jpg" alt="Ustawi Logo">
+            </a>
+            <div class="mobile-menu-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="./about.html" class="nav-link">About</a></li>
+                <li><a href="./services.html" class="nav-link active">Services</a></li>
+                <li><a href="./product.html" class="nav-link">Products</a></li>
+                <li><a href="./blog.html" class="nav-link">Blog</a></li>
+                <li><a href="./contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="container-service">
-      <div class="big-text">OUR SERVICES</div>
-      <div class="small-text">Home / Services</div>
-    </div>
-
-    <div class="main-container">
-      <div class="icon-container">
-        <div class="blur-effect"></div>
-        <div class="text3">
-          <span class="dark-brown">Ustawi</span>
-          <span class="light-brown">Eco</span>
-          <span class="dark-brown">Solutions</span>
-          <span class="light-brown">Services</span>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="page-header-content">
+        <h1 class="page-title">Our Services</h1>
+        <div class="page-breadcrumb">
+          <a href="../index.html">Home</a> / Services
         </div>
       </div>
+    </section>
 
-      <div class="items-container">
-        <div class="item">
-          <div class="circle"></div>
-          <img src="../assets/images/sprout.png" alt="Icon 1" />
-          <div class="item-text">
-            <h3>INSECT PROTEIN (BSF LARVAE)</h3>
-            <p>
-              Particularly from Black Soldier Fly (BSF) larvae, is an innovative
-              and sustainable source of nutrition gaining popularity worldwide.
-              BSF larvae are highly efficient at converting organic waste into
-              high-quality protein and fats, making them an eco-friendly
-              alternative to traditional livestock. Rich in essential amino
-              acids, fatty acids, and nutrients, BSF larvae provide a
-              nutrient-dense option for both animal feed and human consumption
-            </p>
-            <button class="green-button">Learn More</button>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="circle"></div>
-          <img src="../assets/images/sprout.png" alt="Icon 1" />
-          <div class="item-text">
-            <h3>ORGANIC FRASS</h3>
-            <p>
-              Organic frass is a natural byproduct of insect farming,
-              particularly from the excrement and cast-off exoskeletons of
-              insects like the Black Soldier Fly larvae. Rich in nutrients, it's
-              an excellent organic fertilizer that offers a sustainable
-              alternative to synthetic options. Frass is packed with essential
-              plant nutrients such as nitrogen, phosphorus, and potassium (NPK),
-              as well as micronutrients and beneficial microorganisms that
-              improve soil health and structure
-            </p>
-            <button class="green-button">Learn More</button>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="circle"></div>
-          <img src="../assets/images/sprout.png" alt="Icon 1" />
-          <div class="item-text">
-            <h3>BSFL OIL</h3>
-            <p>
-              BSFL (Black Soldier Fly Larvae) oil is a high- value product
-              derived from the processing of Black Soldier Fly larvae, an
-              increasingly popular source of sustainable protein. As larvae are
-              harvested, they are often pressed or otherwise processed to
-              extract their fat content, resulting in a rich, nutrient- dense
-              oil. This oil is notable for its high content of lauric acid, a
-              medium-chain fatty acid that is also found in coconut oil and is
-              known for its antimicrobial and anti- inflammatory properties.
-            </p>
-            <button class="green-button">Learn More</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="testimony">
-      <div class="testimonial-container">
-        <div class="progress-bar"></div>
-        <div class="fas fa-quote-right fa-quote"></div>
-        <div class="fas fa-quote-left fa-quote"></div>
-        <p class="testimonial">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-          ipsam autem illo debitis quam? Reiciendis deserunt maiores provident
-          esse cum libero quod? Libero maxime veritatis, nesciunt saepe quasi
-          hic iure! Esse hic qui neque facere numquam, vel porro omnis nam velit
-          nisi nemo quos deserunt ratione a modi autem veniam distinctio vitae
-          sed temporibus quis. Atque non earum minima quo.
+    <!-- Services Hero -->
+    <section class="services-hero">
+      <div class="services-hero-content">
+        <h2><span class="brand-text">Ustawi Eco Solutions</span> Services</h2>
+        <p>
+          Transforming waste into valuable resources through innovative Black
+          Soldier Fly technology and sustainable practices.
         </p>
-        <div class="user">
-          <img
-            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
-            alt="user"
-            class="user-image"
-          />
-          <div class="user-details">
-            <h4 class="username">Teresa Smith</h4>
-            <p class="role">Marketing</p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <div class="services-container">
+        <div class="services-grid">
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <div class="service-icon-circle">
+                <i class="fas fa-bug"></i>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Insect Protein (BSF Larvae)</h3>
+              <p class="service-description">
+                Particularly from Black Soldier Fly (BSF) larvae, is an
+                innovative and sustainable source of nutrition gaining
+                popularity worldwide. BSF larvae are highly efficient at
+                converting organic waste into high-quality protein and fats,
+                making them an eco-friendly alternative to traditional
+                livestock. Rich in essential amino acids, fatty acids, and
+                nutrients, BSF larvae provide a nutrient-dense option for both
+                animal feed and human consumption.
+              </p>
+              <button class="service-btn">Learn More</button>
+            </div>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <div class="service-icon-circle">
+                <i class="fas fa-seedling"></i>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Organic Frass</h3>
+              <p class="service-description">
+                Organic frass is a natural byproduct of insect farming,
+                particularly from the excrement and cast-off exoskeletons of
+                insects like the Black Soldier Fly larvae. Rich in nutrients,
+                it's an excellent organic fertilizer that offers a sustainable
+                alternative to synthetic options. Frass is packed with essential
+                plant nutrients such as nitrogen, phosphorus, and potassium
+                (NPK), as well as micronutrients and beneficial microorganisms
+                that improve soil health and structure.
+              </p>
+              <button class="service-btn">Learn More</button>
+            </div>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <div class="service-icon-circle">
+                <i class="fas fa-tint"></i>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">BSFL Oil</h3>
+              <p class="service-description">
+                BSFL (Black Soldier Fly Larvae) oil is a high-value product
+                derived from the processing of Black Soldier Fly larvae, an
+                increasingly popular source of sustainable protein. As larvae
+                are harvested, they are often pressed or otherwise processed to
+                extract their fat content, resulting in a rich, nutrient-dense
+                oil. This oil is notable for its high content of lauric acid, a
+                medium-chain fatty acid that is also found in coconut oil and is
+                known for its antimicrobial and anti-inflammatory properties.
+              </p>
+              <button class="service-btn">Learn More</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+      <div class="testimonials-container">
+        <div class="testimonial-card animate-on-scroll" id="testimonialCard">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="testimonial-text" id="testimonialText">
+            "Ustawi's innovative approach to waste management has revolutionized
+            our agricultural practices. Their BSF larvae products have not only
+            improved our crop yields but also helped us achieve our
+            sustainability goals. The quality and consistency of their organic
+            frass is exceptional."
+          </p>
+          <div class="testimonial-author">
+            <img
+              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+              alt="Teresa Smith"
+              class="author-image"
+              id="authorImage"
+            />
+            <div class="author-info">
+              <h4 id="authorName">Teresa Smith</h4>
+              <p id="authorRole">Agricultural Manager</p>
+            </div>
+          </div>
+          <div class="testimonial-indicators">
+            <span class="indicator active" data-testimonial="0"></span>
+            <span class="indicator" data-testimonial="1"></span>
+            <span class="indicator" data-testimonial="2"></span>
+            <span class="indicator" data-testimonial="3"></span>
+            <span class="indicator" data-testimonial="4"></span>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="footer-background">
-        <div class="footer-columns">
-          <!-- Quick Links -->
-          <div class="footer-column">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-section">
             <h3>Quick Links</h3>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <!-- Add more quick links as needed -->
+            <ul class="nav-menu" id="navMenu">
+              <li><a href="../index.html" class="nav-link">Home</a></li>
+              <li><a href="./about.html" class="nav-link active">About</a></li>
+              <li><a href="./services.html" class="nav-link">Services</a></li>
+              <li><a href="./product.html" class="nav-link">Products</a></li>
+              <li><a href="./blog.html" class="nav-link">Blog</a></li>
+              <li><a href="./contact.html" class="nav-link">Contact</a></li>
             </ul>
           </div>
-
-          <!-- Other Pages -->
-          <div class="footer-column">
-            <h3>Other Pages</h3>
+          <div class="footer-section">
+            <h3>Services</h3>
             <ul>
-              <li><a href="#">News and Media</a></li>
-              <li><a href="#">Laboratory</a></li>
-              <li><a href="#">FAQ</a></li>
-              <!-- Add more pages as needed -->
+              <li><a href="#">Organic Waste Management</a></li>
+              <li><a href="#">BSF Larvae Production</a></li>
+              <li><a href="#">Organic Fertilizer</a></li>
+              <li><a href="#">Sustainable Protein</a></li>
             </ul>
           </div>
-
-          <!-- Contact Info -->
-          <div class="footer-column">
+          <div class="footer-section">
             <h3>Contact Info</h3>
             <ul>
               <li>
                 <i class="fas fa-envelope"></i> info@ustawiorganicfarms.org
               </li>
-              <li>
-                <i class="fas fa-map-marker-alt"></i> 123 Farm Road, City,
-                Country
-              </li>
-              <li><i class="fas fa-phone-alt"></i> +1234567890</li>
+              <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
+              <li><i class="fas fa-phone-alt"></i> +254792691810</li>
             </ul>
           </div>
-
-          <!-- Free Consultation -->
-          <div class="footer-column">
-            <h3>Free Consultation</h3>
+          <!-- <div class="footer-section">
+            <h3>Newsletter</h3>
             <p>
-              Let us cultivate success together through personalized advice and
-              strategic insights for your agricultural ventures.
+              Stay updated with our latest sustainable solutions and
+              innovations.
             </p>
-            <br />
-            <a href="#" class="btn light-green">Contact Us Now</a>
-          </div>
+            <form style="margin-top: 15px">
+              <input
+                type="email"
+                placeholder="Your email"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  border: none;
+                  border-radius: 5px;
+                  margin-bottom: 10px;
+                "
+              />
+              <button
+                type="submit"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  background: var(--primary-green);
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                "
+              >
+                Subscribe
+              </button>
+            </form>
+          </div> -->
         </div>
-
-        <!-- Divider -->
-        <hr class="footer-divider" />
-
-        <!-- Company Logo -->
-        <div class="company-logo">
-          <img
-            src="../assets/images/logo.jpg"
-            alt="Ustawi Organic Farms Logo"
-          />
-        </div>
-
-        <!-- Copyright -->
-        <div class="copyright">
-          <p>&copy; 2024 Ustawi Organic Farms. All rights reserved.</p>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Ustawi Organic Farms. All rights reserved. | Designed
+            with 💚 for sustainability
+          </p>
         </div>
       </div>
     </footer>
-  </body>
-  <script
-    src="https://kit.fontawesome.com/baa6fea956.js"
-    crossorigin="anonymous"
-  ></script>
-  <script src="./js/script.js"></script>
 
-  <script>
-    const left = document.querySelector(".left");
-    const right = document.querySelector(".right");
-    const container = document.querySelector(".container");
+    <script>
+      // Mobile menu toggle
+      const mobileToggle = document.getElementById("mobileToggle");
+      const navMenu = document.getElementById("navMenu");
 
-    left.addEventListener("mouseenter", () =>
-      container.classList.add("hover-left")
-    );
-    left.addEventListener("mouseleave", () =>
-      container.classList.remove("hover-left")
-    );
+      mobileToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+      });
 
-    right.addEventListener("mouseenter", () =>
-      container.classList.add("hover-right")
-    );
-    right.addEventListener("mouseleave", () =>
-      container.classList.remove("hover-right")
-    );
-  </script>
+      // Scroll animations
+      const animateElements = document.querySelectorAll(".animate-on-scroll");
 
-  <script>
-    const testimonialsContainer = document.querySelector(
-      ".testimonial-container"
-    );
-    const testimonial = document.querySelector(".testimonial");
-    const userImage = document.querySelector(".user-image");
-    const username = document.querySelector(".username");
-    const role = document.querySelector(".role");
+      function animateOnScroll() {
+        animateElements.forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top;
+          const elementVisible = 150;
 
-    const testimonials = [
-      {
-        name: "Teresa Smith",
-        position: "Marketing",
-        photo:
-          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ipsam autem illo debitis quam? Reiciendis deserunt maiores provident esse cum libero quod? Libero maxime veritatis, nesciunt saepe quasi hic iure!Esse hic qui neque facere numquam, vel porro omnis nam velit nisi nemo quos deserunt ratione a modi autem veniam temporibus quis. Atque non earum minima quo.",
-      },
-      {
-        name: "June Cha",
-        position: "Software Engineer",
-        photo:
-          "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=335&q=80",
-        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum consectetur sequi pariatur labore, possimus doloremque. Voluptates ipsum vero reiciendis obcaecati cupiditate, eveniet rerum modi odio officia sed deleniti labore voluptatibus!Hic nesciunt officia minima reprehenderit harum quod temporibus. Molestiae, debitis adipisci obcaecati quasi neque.",
-      },
-      {
-        name: "Sara Santos",
-        position: "Web Designer",
-        photo:
-          "https://images.unsplash.com/photo-1524159730786-4e74a1b78d7d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus accusamus ratione laborum quae voluptatibus debitis soluta quo cupiditate nihil natus, amet nostrum voluptatem earum modi quidem facilis totam reiciendis neque! Tempora maxime quos, impedit aut, distinctio dignissimos sed aspernatur earum quia dolor minus. Iste maiores.",
-      },
-      {
-        name: "Renan Duarte",
-        position: "Receptionist",
-        photo:
-          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus accusamus similique maiores Saepe praesentium illum!",
-      },
-      {
-        name: "Jonathan Nunfiez",
-        position: "Teacher",
-        photo:
-          "https://images.unsplash.com/photo-1563122870-6b0b48a0af09?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80",
-        text: "There are many variations similique maiores Saepe of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even.",
-      },
-      {
-        name: "Sasha Jones",
-        position: "Accountant",
-        photo:
-          "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
-        text: "Ste necessitatibus voluptatibus similique maiores Saepe praesentium illum voluptates facilis nihil consectetur error nulla recusandae maiores suscipit, pariatur excepturi debitis laudantium incidunt necessitatibus asperiores, iste vel cum, veritatis nesciunt repudiandae rem corporis. Optio, voluptatum unde!",
-      },
-      {
-        name: "Rita Wilson",
-        position: "Doctor",
-        photo:
-          "https://images.unsplash.com/photo-1545133875-55b651cbf4aa?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=375&q=80",
-        text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.",
-      },
-    ];
-
-    let idx = 1;
-
-    function updadeTestimonial() {
-      const { name, position, photo, text } = testimonials[idx];
-
-      testimonial.innerHTML = text;
-      userImage.src = photo;
-      username.innerHTML = name;
-      role.innerHTML = position;
-
-      idx++;
-
-      if (idx > testimonials.length - 1) {
-        idx = 0;
+          if (elementTop < window.innerHeight - elementVisible) {
+            element.classList.add("animated");
+          }
+        });
       }
-    }
 
-    setInterval(updadeTestimonial, 10000);
-  </script>
+      window.addEventListener("scroll", animateOnScroll);
+      animateOnScroll(); // Run on load
 
-  <script
-    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"
-  ></script>
+      // Testimonials
+      const testimonials = [
+        {
+          name: "Teresa Smith",
+          role: "Agricultural Manager",
+          photo:
+            "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          text: "Ustawi's innovative approach to waste management has revolutionized our agricultural practices. Their BSF larvae products have not only improved our crop yields but also helped us achieve our sustainability goals. The quality and consistency of their organic frass is exceptional.",
+        },
+        {
+          name: "Dr. James Kiprotich",
+          role: "Environmental Scientist",
+          photo:
+            "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          text: "As an environmental scientist, I'm impressed by Ustawi's commitment to sustainable practices. Their Black Soldier Fly technology represents a significant breakthrough in organic waste management and protein production.",
+        },
+        {
+          name: "Mary Wanjiku",
+          role: "Poultry Farmer",
+          photo:
+            "https://images.unsplash.com/photo-1494790108755-2616b612b9d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          text: "Since switching to Ustawi's insect protein feed, my poultry has shown remarkable improvements in health and egg production. The nutritional value is outstanding, and I appreciate the sustainable approach.",
+        },
+        {
+          name: "Peter Muthomi",
+          role: "Fish Farm Owner",
+          photo:
+            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          text: "Ustawi's BSF larvae have transformed my aquaculture operation. The fish growth rates have increased significantly, and the cost-effectiveness compared to traditional feeds is remarkable.",
+        },
+        {
+          name: "Grace Nyambura",
+          role: "Organic Farmer",
+          photo:
+            "https://images.unsplash.com/photo-1524159730786-4e74a1b78d7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          text: "The organic frass from Ustawi has completely changed how I approach soil fertilization. My crops are healthier, yields are higher, and I'm contributing to a circular economy. It's a win-win solution.",
+        },
+      ];
+
+      let currentTestimonial = 0;
+      const testimonialText = document.getElementById("testimonialText");
+      const authorName = document.getElementById("authorName");
+      const authorRole = document.getElementById("authorRole");
+      const authorImage = document.getElementById("authorImage");
+      const indicators = document.querySelectorAll(".indicator");
+
+      function updateTestimonial(index) {
+        const testimonial = testimonials[index];
+
+        testimonialText.textContent = testimonial.text;
+        authorName.textContent = testimonial.name;
+        authorRole.textContent = testimonial.role;
+        authorImage.src = testimonial.photo;
+        authorImage.alt = testimonial.name;
+
+        // Update indicators
+        indicators.forEach((indicator, i) => {
+          indicator.classList.toggle("active", i === index);
+        });
+
+        currentTestimonial = index;
+      }
+
+      // Auto-rotate testimonials
+      setInterval(() => {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        updateTestimonial(currentTestimonial);
+      }, 8000);
+
+      // Manual testimonial control
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener("click", () => {
+          updateTestimonial(index);
+        });
+      });
+
+      // Navbar background on scroll
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 100) {
+          navbar.style.background = "rgba(255, 255, 255, 0.98)";
+          navbar.style.backdropFilter = "blur(20px)";
+        } else {
+          navbar.style.background = "rgba(255, 255, 255, 0.95)";
+          navbar.style.backdropFilter = "blur(10px)";
+        }
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

@@ -1,279 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ustawi Organic Farms</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ustawi Organic Farms</title>
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon_io/android-chrome-192x192.png">
-
- 
-  </head>
-
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
     <!-- Header -->
     <header class="header">
-      <!-- Email -->
-      <div class="header__email">Email: info@ustawiorganicfarms.org</div>
-      <!-- Social Media Icons -->
-      <ul class="social-icons">
-        <li>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </li>
-      </ul>
+        <div class="header-content">
+            <div class="header-email">
+                <i class="fas fa-envelope"></i>
+                info@ustawiorganicfarms.org
+            </div>
+            <ul class="social-icons">
+                <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light-brown">
-      <a class="navbar-brand" href="#">
-        <img src="../assets/images/logo.jpg" width="60" height="60" class="d-inline-block align-top logo" alt="Your Logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link white-text" href="../index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link white-text" href="./about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link white-text" href="./services.html">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link white-text" href="./blog.html">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link white-text" href="./product.html">Products</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link white-text" href="./contact.html">Contact us</a>
-          </li>
-        </ul>
-      </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                            <img src="../assets/images/logo.jpg" alt="Ustawi Logo">
+            </a>
+            <div class="mobile-menu-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="./about.html" class="nav-link">About</a></li>
+                <li><a href="./services.html" class="nav-link">Services</a></li>
+                <li><a href="./products.html" class="nav-link">Products</a></li>
+                <li><a href="./blog.html" class="nav-link">Blog</a></li>
+                <li><a href="./contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">Get in touch with our sustainable agriculture experts</p>
+            <div class="page-breadcrumb">
+                <a href="../index.html">Home</a> / Contact Us
+            </div>
+        </div>
+    </section>
 
-    <div class="contact-page">
-    <div class="container-abt">
-      <div class="big-text">CONTACT US</div>
-      <div class="small-text">Home / Contact Us</div>
-    </div>
+    <!-- Contact Info Section -->
+    <section class="contact-info-section">
+        <div class="contact-info-container">
+            <div class="contact-info-grid">
+                <div class="contact-card animate-on-scroll">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Our Farm</h3>
+                    <p>
+                        <strong>Ustawi Organic Farms</strong><br>
+                        Otonglo, Kisumu County<br>
+                        Kenya<br><br>
+                        <a href="https://goo.gl/maps/YourLocationLink" class="contact-link" target="_blank">
+                            Get Directions <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </p>
+                </div>
 
-    <div class="container">
-      <div class="card-contact">
-        <h2>Contact Us</h2>
-        <p>
-          123 Main Street,<br />
-          City, Country
-        </p>
-      </div>
+                <div class="contact-card animate-on-scroll">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>
+                        <strong>Main Office:</strong><br>
+                        <a href="tel:+254792691810" class="contact-link">+254 792 691 810</a><br><br>
+                        <strong>WhatsApp:</strong><br>
+                        <a href="https://wa.me/254792691810" class="contact-link" target="_blank">
+                            +254 792 691 810 <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </p>
+                </div>
 
-      <div class="card-contact">
-        <h2>Call Us</h2>
-        <p>Phone: +1234567890<br />Mobile: +9876543210</p>
-      </div>
+                <div class="contact-card animate-on-scroll">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>
+                        <strong>General Inquiries:</strong><br>
+                        <a href="mailto:info@ustawiorganicfarms.org" class="contact-link">info@ustawiorganicfarms.org</a><br><br>
+                        <strong>Business Hours:</strong><br>
+                        Monday - Friday: 8:00 AM - 5:00 PM<br>
+                        Saturday: 9:00 AM - 2:00 PM
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="card-contact">
-        <h2>Mail Us</h2>
-        <p>Email: info@example.com<br />Contact: contact@example.com</p>
-      </div>
-    </div>
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="contact-form-container">
+            <div class="form-header animate-on-scroll">
+                <div class="form-logo">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='95' fill='%2350c878'/%3E%3Cpath d='M60 120 Q100 80 140 120 Q100 160 60 120' fill='%23fff'/%3E%3Ccircle cx='100' cy='100' r='30' fill='%238b4513'/%3E%3C/svg%3E" alt="Ustawi Logo">
+                </div>
+                <h2>Send Us a Message</h2>
+                <p>Have questions about our sustainable products or services? We'd love to hear from you. Fill out the form below and we'll get back to you soon.</p>
+            </div>
 
-    <div class="contact-us">
-      <div class="container-contact">
-        <h1>Send Us a Message</h1>
-        <img src="../assets/images/logo.jpg" alt="Icon" class="blur-icon" />
-        <form action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="845f3d3b-973e-454e-b99f-af2c13d456cc">
-          <div class="form-row">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              class="form-input"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              class="form-input"
-            />
-          </div>
-          <div class="form-row">
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              class="form-input"
-            />
-            <input
-              type="text"
-              name="phone"
-              placeholder="Your Phone"
-              class="form-input"
-            />
-          </div>
-          <textarea
-            name="message"
-            rows="6"
-            placeholder="Your Message"
-          ></textarea>
-          <button type="submit" class="send-button">Send</button>
-        </form>
-      </div>
-    </div>
-  </div>
+            <div class="contact-form animate-on-scroll">
+                <div id="successMessage" class="success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Thank you! Your message has been sent successfully. We'll get back to you soon.</span>
+                </div>
 
+                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                    <input type="hidden" name="access_key" value="845f3d3b-973e-454e-b99f-af2c13d456cc">
+                    <input type="hidden" name="subject" value="New Contact Form Submission from Ustawi Website">
+                    <input type="hidden" name="from_name" value="Ustawi Contact Form">
 
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Your Full Name *" class="form-input" required>
+                        <input type="email" name="email" placeholder="Your Email Address *" class="form-input" required>
+                    </div>
 
+                    <div class="form-row">
+                        <input type="text" name="subject" placeholder="Subject *" class="form-input" required>
+                        <input type="tel" name="phone" placeholder="Your Phone Number" class="form-input">
+                    </div>
 
+                    <textarea name="message" placeholder="Your Message *" class="form-textarea" required rows="6"></textarea>
 
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
 
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-header animate-on-scroll">
+            <h2>Find Us on the Map</h2>
+            <p>Visit our sustainable farm in Otonglo, Kisumu County, Kenya</p>
+        </div>
+        <div class="map-container animate-on-scroll">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.002759796584!2d34.7065328!3d-0.0747911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa5895e30c531%3A0x62284c299ba322a7!2sOtonglo%20Stage!5e0!3m2!1sen!2sus!4v1684675487698!5m2!1sen!2sus"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ustawi Organic Farms Location">
+            </iframe>
+        </div>
+    </section>
 
-
-
-
-
-
-        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5yuGpb1Cwpg8vuRlz9aeYcvcquvLsVkw"></script>
-        <script>
-          function initMap() {
-            // Define the location to center the map
-            var myLatLng = {lat: -0.0723779, lng: 34.7013261};
-    
-            // Create a map object and set the center and zoom level
-            var map = new google.maps.Map(document.getElementById('map'), {
-              center: myLatLng,
-              zoom: 12
-            });
-    
-            // Add a marker to the map
-            var marker = new google.maps.Marker({
-              position: myLatLng,
-              map: map,
-              title: 'Otonglo'
-            });
-          }
-        </script>
-      </head>
-      <body onload="initMap()">
-        <div id="map" style="height: 500px; width: 100%;"></div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.002759796584!2d34.7065328!3d-0.0747911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa5895e30c531%3A0x62284c299ba322a7!2sOtonglo%20Stage!5e0!3m2!1sen!2sus!4v1684675487698!5m2!1sen!2sus" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- WhatsApp FAB -->
+    <a href="https://wa.me/254792691810?text=Hi! I'm interested in learning more about Ustawi Organic Farms." class="whatsapp-fab" target="_blank" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="footer-background">
-        <div class="footer-columns">
-          <!-- Quick Links -->
-          <div class="footer-column">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <!-- Add more quick links as needed -->
-            </ul>
-          </div>
-
-          <!-- Other Pages -->
-          <div class="footer-column">
-            <h3>Other Pages</h3>
-            <ul>
-              <li><a href="#">News and Media</a></li>
-              <li><a href="#">Laboratory</a></li>
-              <li><a href="#">FAQ</a></li>
-              <!-- Add more pages as needed -->
-            </ul>
-          </div>
-
-          <!-- Contact Info -->
-          <div class="footer-column">
-            <h3>Contact Info</h3>
-            <ul>
-              <li>
-                <i class="fas fa-envelope"></i> info@ustawiorganicfarms.org
-              </li>
-              <li>
-                <i class="fas fa-map-marker-alt"></i> 123 Farm Road, City,
-                Country
-              </li>
-              <li><i class="fas fa-phone-alt"></i> +1234567890</li>
-            </ul>
-          </div>
-
-          <!-- Free Consultation -->
-          <div class="footer-column">
-            <h3>Free Consultation</h3>
-            <p>
-              Let us cultivate success together through personalized advice and
-              strategic insights for your agricultural ventures.
-            </p>
-            <br />
-            <a href="#" class="btn light-green">Contact Us Now</a>
-          </div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./products.html">Products</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Organic Waste Management</a></li>
+                        <li><a href="#">BSF Larvae Production</a></li>
+                        <li><a href="#">Organic Fertilizer</a></li>
+                        <li><a href="#">Sustainable Protein</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@ustawiorganicfarms.org</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Otonglo, Kisumu County, Kenya</li>
+                        <li><i class="fas fa-phone-alt"></i> +254 792 691 810</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <p>Stay connected with our latest updates and sustainable farming tips.</p>
+                    <div style="margin-top: 15px; display: flex; gap: 15px;">
+                        <a href="#" style="color: var(--primary-green); font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: var(--primary-green); font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: var(--primary-green); font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: var(--primary-green); font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ustawi Organic Farms. All rights reserved. | Designed with 💚 for sustainability</p>
+            </div>
         </div>
-
-        <!-- Divider -->
-        <hr class="footer-divider" />
-
-        <!-- Company Logo -->
-        <div class="company-logo">
-          <img
-            src="../assets/images/logo.jpg"
-            alt="Ustawi Organic Farms Logo"
-          />
-        </div>
-
-        <!-- Copyright -->
-        <div class="copyright">
-          <p>&copy; 2024 Ustawi Organic Farms. All rights reserved.</p>
-        </div>
-      </div>
     </footer>
-  </body>
-  <script
-    src="https://kit.fontawesome.com/baa6fea956.js"
-    crossorigin="anonymous"
-  ></script>
-  <script src="./js/script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitBtn = this.querySelector('.submit-btn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const originalText = btnText.textContent;
+            
+            btnText.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            // Submit form
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: new FormData(this)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show success message
+                    successMessage.classList.add('show');
+                    contactForm.reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        successMessage.classList.remove('show');
+                    }, 5000);
+                } else {
+                    alert('Sorry, there was an error sending your message. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Sorry, there was an error sending your message. Please try again.');
+            })
+            .finally(() => {
+                // Reset button
+                btnText.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+
+        // Scroll animations
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+        function animateOnScroll() {
+            animateElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animated');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Run on load
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.backdropFilter = 'blur(20px)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form validation enhancements
+        const formInputs = document.querySelectorAll('.form-input, .form-textarea');
+        
+        formInputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.required && !this.value.trim()) {
+                    this.style.borderColor = '#e74c3c';
+                } else {
+                    this.style.borderColor = 'var(--light-gray)';
+                }
+            });
+
+            input.addEventListener('focus', function() {
+                this.style.borderColor = 'var(--primary-green)';
+            });
+        });
+    </script>
+</body>
 </html>
