@@ -42,6 +42,7 @@
                 <li><a href="./about.html" class="nav-link">About</a></li>
                 <li><a href="./services.html" class="nav-link">Services</a></li>
                 <li><a href="./product.html" class="nav-link">Products</a></li>
+                <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
                 <li><a href="./blog.html" class="nav-link active">Blog</a></li>
                 <li><a href="./contact.html" class="nav-link">Contact</a></li>
             </ul>
@@ -61,15 +62,37 @@
     <!-- Video Section -->
     <section class="video-section">
         <div class="video-container">
-            <div class="video-intro animate-on-scroll">
-                <h2>Our Farm in Action</h2>
-                <p>Watch how we transform organic waste into valuable sustainable products using innovative Black Soldier Fly technology.</p>
+            <div class="video-header animate-on-scroll">
+                <h2>Farm Operations & Innovation</h2>
+                <p>Watch our sustainable farming processes and innovative Black Soldier Fly technology in action.</p>
             </div>
-            <div class="video-wrapper animate-on-scroll">
-                <video controls autoplay muted>
-                    <source src="../assets/ogfarm.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+
+            <div class="video-grid">
+                <div class="video-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <video controls muted poster="../assets/blog/IMG-20250904-WA0010.jpg">
+                            <source src="../assets/ogfarm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Our Farm in Action</h3>
+                        <p>Comprehensive overview of our sustainable farming operations and waste transformation processes.</p>
+                    </div>
+                </div>
+
+                <div class="video-item animate-on-scroll">
+                    <div class="video-wrapper">
+                        <video controls muted poster="../assets/blog/IMG-20250904-WA0011.jpg">
+                            <source src="../assets/blog/VID-20250904-WA0001.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Latest Farm Operations</h3>
+                        <p>See our latest innovations in Black Soldier Fly farming, organic waste processing, and sustainable product creation.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -99,105 +122,410 @@
                     <div class="blog-content">
                         <div class="blog-meta">
                             <span><i class="fas fa-calendar"></i> March 15, 2024</span>
-                            <span><i class="fas fa-user"></i> Dr. Sarah Kimani</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
                         </div>
-                        <h3 class="blog-title">The Future of Protein: How Black Soldier Fly Larvae are Revolutionizing Food Security</h3>
-                        <p class="blog-excerpt">Discover how BSF larvae are becoming a game-changer in sustainable protein production, offering solutions to global food security challenges while reducing environmental impact.</p>
-                        <a href="#" class="read-more">
+                        <h3 class="blog-title">Premium Black Soldier Fly Larvae: The Future of Sustainable Protein</h3>
+                        <p class="blog-excerpt">Transform your livestock nutrition with our premium BSFL! Rich in protein, essential amino acids, and healthy fats. Perfect for poultry, fish, and livestock feed. Boost growth rates while reducing feed costs significantly.</p>
+                        <button class="read-more" onclick="openBlogModal('bsf-larvae-1')">
                             Read More
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                            <i class="fas fa-book-open"></i>
+                        </button>
                     </div>
                 </article>
 
+                <!-- Organic Frass Fertilizer -->
                 <article class="blog-card animate-on-scroll" data-category="agriculture">
                     <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Organic Farming">
+                        <img src="../assets/blog/IMG-20250904-WA0007.jpg" alt="Organic Frass Fertilizer">
                         <div class="blog-category">Agriculture</div>
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
-                            <span><i class="fas fa-calendar"></i> March 10, 2024</span>
-                            <span><i class="fas fa-user"></i> Peter Mwangi</span>
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
                         </div>
-                        <h3 class="blog-title">Organic Frass: The Superior Alternative to Chemical Fertilizers</h3>
-                        <p class="blog-excerpt">Learn why organic frass is gaining popularity among farmers as a nutrient-rich, environmentally friendly alternative to synthetic fertilizers.</p>
-                        <a href="#" class="read-more">
+                        <h3 class="blog-title">Organic Frass: Nature's Perfect Fertilizer for Maximum Yields</h3>
+                        <p class="blog-excerpt">Supercharge your crops with our nutrient-rich organic frass! Contains NPK, micronutrients, and beneficial microbes. Significantly increases crop yields, improves soil structure, and provides slow-release nutrition. 100% organic and chemical-free!</p>
+                        <button class="read-more" onclick="openBlogModal('frass-fertilizer-1')">
                             Read More
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                            <i class="fas fa-book-open"></i>
+                        </button>
                     </div>
                 </article>
 
+                <!-- BSF Oil Production -->
                 <article class="blog-card animate-on-scroll" data-category="innovation">
                     <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Innovation in Agriculture">
+                        <img src="../assets/blog/IMG-20250904-WA0008.jpg" alt="BSF Oil Production">
                         <div class="blog-category">Innovation</div>
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
-                            <span><i class="fas fa-calendar"></i> March 5, 2024</span>
-                            <span><i class="fas fa-user"></i> Mary Wanjiku</span>
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
                         </div>
-                        <h3 class="blog-title">From Waste to Wealth: The Circular Economy in Action</h3>
-                        <p class="blog-excerpt">Explore how our innovative approach transforms organic waste into valuable products, creating a sustainable circular economy model.</p>
-                        <a href="#" class="read-more">
+                        <h3 class="blog-title">Revolutionary BSF Oil: Premium Biodiesel & Industrial Applications</h3>
+                        <p class="blog-excerpt">Discover our high-quality BSF oil extracted from larvae! Perfect for biodiesel production, cosmetics, and industrial lubricants. Sustainable alternative to palm oil with superior fatty acid profile. Join the green energy revolution!</p>
+                        <button class="read-more" onclick="openBlogModal('bsf-oil-1')">
                             Read More
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                            <i class="fas fa-book-open"></i>
+                        </button>
                     </div>
                 </article>
 
+                <!-- Organic Farm Manure -->
                 <article class="blog-card animate-on-scroll" data-category="environment">
                     <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Environmental Impact">
+                        <img src="../assets/blog/IMG-20250904-WA0009.jpg" alt="Premium Organic Manure">
                         <div class="blog-category">Environment</div>
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
-                            <span><i class="fas fa-calendar"></i> February 28, 2024</span>
-                            <span><i class="fas fa-user"></i> James Ochieng</span>
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
                         </div>
-                        <h3 class="blog-title">Reducing Carbon Footprint Through Sustainable Agriculture Practices</h3>
-                        <p class="blog-excerpt">Understand how sustainable farming practices and innovative waste management contribute to reducing greenhouse gas emissions.</p>
-                        <a href="#" class="read-more">
+                        <h3 class="blog-title">Premium Organic Manure: Soil Health Revolution for Modern Farmers</h3>
+                        <p class="blog-excerpt">Transform your soil with our composted organic manure! Rich in organic matter, improves water retention, enhances soil biology, and provides long-lasting nutrition. Certified organic, pathogen-free, and ready to use. Your soil will thank you!</p>
+                        <button class="read-more" onclick="openBlogModal('organic-manure-1')">
                             Read More
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                            <i class="fas fa-book-open"></i>
+                        </button>
                     </div>
                 </article>
 
+                <!-- BSF Farming Process -->
                 <article class="blog-card animate-on-scroll" data-category="agriculture">
                     <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Soil Health">
+                        <img src="../assets/blog/IMG-20250904-WA0010.jpg" alt="BSF Farming Process">
                         <div class="blog-category">Agriculture</div>
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
-                            <span><i class="fas fa-calendar"></i> February 20, 2024</span>
-                            <span><i class="fas fa-user"></i> Grace Nyambura</span>
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
                         </div>
-                        <h3 class="blog-title">Building Healthy Soil: The Foundation of Sustainable Agriculture</h3>
-                        <p class="blog-excerpt">Discover the importance of soil health and how organic amendments like frass contribute to long-term agricultural sustainability.</p>
-                        <a href="#" class="read-more">
+                        <h3 class="blog-title">Sustainable BSF Farming: From Waste to Wealth in 14 Days</h3>
+                        <p class="blog-excerpt">Learn our proven BSF farming techniques! Convert organic waste into valuable protein and fertilizer in just 2 weeks. Low investment, high returns, minimal space required. Perfect for farmers looking to diversify income streams sustainably.</p>
+                        <button class="read-more" onclick="openBlogModal('bsf-farming-1')">
                             Read More
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                            <i class="fas fa-book-open"></i>
+                        </button>
                     </div>
                 </article>
 
+                <!-- Waste Management Solutions -->
                 <article class="blog-card animate-on-scroll" data-category="innovation">
                     <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Technology in Agriculture">
+                        <img src="../assets/blog/IMG-20250904-WA0011.jpg" alt="Waste Management Solutions">
                         <div class="blog-category">Innovation</div>
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
-                            <span><i class="fas fa-calendar"></i> February 15, 2024</span>
-                            <span><i class="fas fa-user"></i> Dr. Michael Kiprotich</span>
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
                         </div>
-                        <h3 class="blog-title">Technology Meets Agriculture: IoT Solutions for Modern Farming</h3>
-                        <p class="blog-excerpt">Explore how Internet of Things (IoT) technology is revolutionizing agriculture and helping farmers make data-driven decisions.</p>
+                        <h3 class="blog-title">Revolutionary Waste Management: Turn Trash into Cash with BSF Technology</h3>
+                        <p class="blog-excerpt">Eliminate waste disposal costs while generating revenue! Our BSF systems process large volumes of organic waste daily, producing valuable protein and fertilizer. Dramatically reduce environmental impact while creating multiple income streams.</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sustainable Protein Production -->
+                <article class="blog-card animate-on-scroll" data-category="sustainability">
+                    <div class="blog-image">
+                        <img src="../assets/blog/IMG-20250904-WA0012.jpg" alt="Sustainable Protein Production">
+                        <div class="blog-category">Sustainability</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
+                        </div>
+                        <h3 class="blog-title">Sustainable Protein Revolution: Feed the Future with BSF Larvae</h3>
+                        <p class="blog-excerpt">Meet growing protein demand sustainably! Our BSFL requires significantly less land and water than traditional protein sources. High conversion efficiency, zero antibiotics, and superior nutritional profile. The protein of tomorrow, available today!</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Organic Fertilizer Benefits -->
+                <article class="blog-card animate-on-scroll" data-category="agriculture">
+                    <div class="blog-image">
+                        <img src="../assets/blog/IMG-20250904-WA0013.jpg" alt="Organic Fertilizer Benefits">
+                        <div class="blog-category">Agriculture</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
+                        </div>
+                        <h3 class="blog-title">Organic Fertilizer Mastery: Boost Yields While Protecting the Environment</h3>
+                        <p class="blog-excerpt">Maximize profits with our premium organic fertilizers! Improve soil health, increase water retention, and boost beneficial microorganisms. Certified organic, slow-release formula ensures consistent nutrition throughout the growing season.</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Farm Innovation -->
+                <article class="blog-card animate-on-scroll" data-category="innovation">
+                    <div class="blog-image">
+                        <img src="../assets/blog/IMG-20250904-WA0014.jpg" alt="Farm Innovation Technology">
+                        <div class="blog-category">Innovation</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
+                        </div>
+                        <h3 class="blog-title">Smart Farming Innovation: Technology Meets Sustainability</h3>
+                        <p class="blog-excerpt">Experience the future of farming with our integrated BSF systems! IoT monitoring, automated feeding, climate control, and data analytics. Significantly increase efficiency while reducing labor costs. Smart farming made simple!</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Circular Economy Model -->
+                <article class="blog-card animate-on-scroll" data-category="environment">
+                    <div class="blog-image">
+                        <img src="../assets/blog/IMG-20250904-WA0015.jpg" alt="Circular Economy Model">
+                        <div class="blog-category">Environment</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
+                        </div>
+                        <h3 class="blog-title">Circular Economy Excellence: Zero Waste, Maximum Value Creation</h3>
+                        <p class="blog-excerpt">Implement our proven circular economy model! Transform organic waste into valuable products. No waste streams, only revenue streams. Eliminate disposal costs while creating multiple income sources. Sustainability that pays!</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Premium Larvae Processing -->
+                <article class="blog-card animate-on-scroll" data-category="sustainability">
+                    <div class="blog-image">
+                        <img src="../assets/blog/IMG-20250904-WA0016.jpg" alt="Premium Larvae Processing">
+                        <div class="blog-category">Sustainability</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
+                        </div>
+                        <h3 class="blog-title">Premium Larvae Processing: Quality Control for Superior Products</h3>
+                        <p class="blog-excerpt">Discover our state-of-the-art processing facilities! Strict quality control, optimal nutrition preservation, and food-grade standards. Our processed larvae deliver consistent quality and superior performance for all applications.</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Soil Enhancement Solutions -->
+                <article class="blog-card animate-on-scroll" data-category="agriculture">
+                    <div class="blog-image">
+                        <img src="../assets/blog/IMG-20250904-WA0017.jpg" alt="Soil Enhancement Solutions">
+                        <div class="blog-category">Agriculture</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
+                        </div>
+                        <h3 class="blog-title">Advanced Soil Enhancement: Regenerative Agriculture Solutions</h3>
+                        <p class="blog-excerpt">Restore degraded soils with our advanced organic amendments! Increase organic matter, improve water infiltration, and enhance nutrient cycling. Transform poor soils into productive farmland. Proven results in just one growing season!</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sustainable Feed Solutions -->
+                <article class="blog-card animate-on-scroll" data-category="innovation">
+                    <div class="blog-image">
+                        <img src="../assets/blog/IMG-20250904-WA0018.jpg" alt="Sustainable Feed Solutions">
+                        <div class="blog-category">Innovation</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
+                        </div>
+                        <h3 class="blog-title">Next-Generation Feed Solutions: Optimize Animal Performance Naturally</h3>
+                        <p class="blog-excerpt">Revolutionize your livestock nutrition with our premium BSF-based feeds! Enhanced digestibility, improved immune function, and faster growth rates. Reduce feed conversion ratios while boosting animal health naturally.</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Organic Waste Transformation -->
+                <article class="blog-card animate-on-scroll" data-category="environment">
+                    <div class="blog-image">
+                        <img src="../assets/blog/IMG-20250904-WA0019.jpg" alt="Organic Waste Transformation">
+                        <div class="blog-category">Environment</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
+                        </div>
+                        <h3 class="blog-title">Organic Waste Transformation: From Problem to Profit in Days</h3>
+                        <p class="blog-excerpt">Turn your waste management challenges into profit opportunities! Our BSF systems process kitchen waste, agricultural residues, and organic byproducts efficiently. Eliminate waste disposal costs while generating valuable products.</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sustainable Agriculture Practices -->
+                <article class="blog-card animate-on-scroll" data-category="agriculture">
+                    <div class="blog-image">
+                        <img src="../assets/blog/IMG-20250904-WA0020.jpg" alt="Sustainable Agriculture Practices">
+                        <div class="blog-category">Agriculture</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
+                        </div>
+                        <h3 class="blog-title">Sustainable Agriculture Mastery: Profitable Farming for the Future</h3>
+                        <p class="blog-excerpt">Master sustainable farming techniques that increase profitability! Integrate BSF systems, organic fertilizers, and regenerative practices. Significantly reduce input costs while improving yields and soil health. Farming that works for generations!</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Premium Frass Applications -->
+                <article class="blog-card animate-on-scroll" data-category="sustainability">
+                    <div class="blog-image">
+                        <img src="../assets/blog/IMG-20250904-WA0021.jpg" alt="Premium Frass Applications">
+                        <div class="blog-category">Sustainability</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
+                        </div>
+                        <h3 class="blog-title">Premium Frass Applications: Unlock Maximum Crop Potential</h3>
+                        <p class="blog-excerpt">Maximize your harvest with our premium frass fertilizer! Perfect NPK balance, beneficial microorganisms, and slow-release nutrition. Ideal for vegetables, fruits, grains, and cash crops. See significant yield increases in your first season!</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Innovative Farming Technology -->
+                <article class="blog-card animate-on-scroll" data-category="innovation">
+                    <div class="blog-image">
+                        <img src="../assets/blog/IMG-20250904-WA0022.jpg" alt="Innovative Farming Technology">
+                        <div class="blog-category">Innovation</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
+                        </div>
+                        <h3 class="blog-title">Cutting-Edge Farming Technology: Automation Meets Sustainability</h3>
+                        <p class="blog-excerpt">Experience the future of farming today! Automated BSF systems, smart monitoring, and precision agriculture tools. Significantly reduce labor costs while increasing productivity. Technology that makes sustainable farming profitable and scalable.</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Organic Certification Success -->
+                <article class="blog-card animate-on-scroll" data-category="agriculture">
+                    <div class="blog-image">
+                        <img src="../assets/blog/IMG-20250904-WA0023.jpg" alt="Organic Certification Success">
+                        <div class="blog-category">Agriculture</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
+                        </div>
+                        <h3 class="blog-title">Organic Certification Success: Premium Markets, Premium Profits</h3>
+                        <p class="blog-excerpt">Achieve organic certification with our compliant products! All our fertilizers and amendments meet strict organic standards. Access premium markets, command higher prices, and build consumer trust. Organic farming made profitable!</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Environmental Impact Solutions -->
+                <article class="blog-card animate-on-scroll" data-category="environment">
+                    <div class="blog-image">
+                        <img src="../assets/blog/IMG-20250904-WA0024.jpg" alt="Environmental Impact Solutions">
+                        <div class="blog-category">Environment</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
+                        </div>
+                        <h3 class="blog-title">Environmental Impact Solutions: Carbon Negative Farming Systems</h3>
+                        <p class="blog-excerpt">Create positive environmental impact while farming profitably! Our systems sequester carbon, reduce methane emissions, and eliminate chemical runoff. Earn carbon credits while producing premium organic products. Farming that heals the planet!</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Success Stories and Results -->
+                <article class="blog-card animate-on-scroll" data-category="sustainability">
+                    <div class="blog-image">
+                        <img src="../assets/blog/IMG-20250904-WA0025.jpg" alt="Success Stories and Results">
+                        <div class="blog-category">Sustainability</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
+                        </div>
+                        <h3 class="blog-title">Proven Success Stories: Real Farmers, Real Results, Real Profits</h3>
+                        <p class="blog-excerpt">Join hundreds of successful farmers using our products! Case studies show significant cost reduction, substantial yield increases, and complete waste elimination. Read testimonials from farmers who transformed their operations with our sustainable solutions.</p>
+                        <a href="#" class="read-more">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Training and Support -->
+                <article class="blog-card animate-on-scroll" data-category="innovation">
+                    <div class="blog-image">
+                        <img src="../assets/blog/IMG-20250904-WA0026.jpg" alt="Training and Support Programs">
+                        <div class="blog-category">Innovation</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> September 4, 2024</span>
+                            <span><i class="fas fa-user"></i> Ustawi Team</span>
+                        </div>
+                        <h3 class="blog-title">Comprehensive Training Programs: Master Sustainable Farming Techniques</h3>
+                        <p class="blog-excerpt">Get expert training and ongoing support! Hands-on workshops, technical assistance, and business development guidance. Learn BSF farming, organic production, and sustainable practices. Start your profitable farming journey with confidence!</p>
                         <a href="#" class="read-more">
                             Read More
                             <i class="fas fa-arrow-right"></i>
@@ -208,75 +536,220 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="faq-container">
-            <div class="faq-header animate-on-scroll">
-                <h2>Frequently Asked Questions</h2>
-                <p>Get answers to common questions about sustainable agriculture and our innovative solutions.</p>
-            </div>
 
-            <div class="faq-item animate-on-scroll">
-                <button class="faq-question">
-                    What are Black Soldier Fly larvae and why are they important?
-                    <i class="fas fa-chevron-down faq-icon"></i>
-                </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Black Soldier Fly larvae are the larval stage of the Hermetia illucens fly. They are incredibly efficient at converting organic waste into high-quality protein and nutrients. These larvae can process food waste, agricultural residues, and other organic materials, transforming them into valuable products like protein meal, oil, and organic fertilizer (frass).
+
+    <!-- Blog Modal -->
+    <div class="blog-modal" id="blogModal">
+        <div class="blog-modal-content">
+            <button class="blog-modal-close" onclick="closeBlogModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="blog-modal-header">
+                <img id="modalImage" src="" alt="">
+                <div class="blog-modal-meta">
+                    <span id="modalCategory" class="modal-category"></span>
+                    <div class="modal-meta-info">
+                        <span id="modalDate"><i class="fas fa-calendar"></i> </span>
+                        <span id="modalAuthor"><i class="fas fa-user"></i> </span>
                     </div>
                 </div>
             </div>
-
-            <div class="faq-item animate-on-scroll">
-                <button class="faq-question">
-                    How does organic frass compare to traditional fertilizers?
-                    <i class="fas fa-chevron-down faq-icon"></i>
-                </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Organic frass offers several advantages over synthetic fertilizers. It provides slow-release nutrients, improves soil structure, enhances water retention, and promotes beneficial microbial activity. Unlike chemical fertilizers, frass doesn't cause soil acidification or groundwater contamination, making it a sustainable long-term solution for soil health.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item animate-on-scroll">
-                <button class="faq-question">
-                    Is insect protein safe for human and animal consumption?
-                    <i class="fas fa-chevron-down faq-icon"></i>
-                </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Yes, insect protein from Black Soldier Fly larvae is safe when properly processed. It's rich in essential amino acids, contains beneficial fatty acids, and has been approved by various food safety authorities worldwide. Many countries already include insect protein in animal feed, and it's increasingly being accepted for human consumption as well.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item animate-on-scroll">
-                <button class="faq-question">
-                    What is the environmental impact of your farming methods?
-                    <i class="fas fa-chevron-down faq-icon"></i>
-                </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Our BSF farming methods have a significantly lower environmental footprint compared to traditional livestock farming. They require 95% less land, 99% less water, and produce 99% fewer greenhouse gas emissions. Additionally, by converting organic waste into valuable products, we're contributing to a circular economy and reducing landfill waste.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item animate-on-scroll">
-                <button class="faq-question">
-                    How can farmers start using your products?
-                    <i class="fas fa-chevron-down faq-icon"></i>
-                </button>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Farmers can start by contacting us through our website or WhatsApp. We provide consultation services to help determine the best products for specific farming needs. We also offer guidance on application rates, timing, and best practices. Our team provides ongoing support to ensure optimal results and customer satisfaction.
-                    </div>
-                </div>
+            <div class="blog-modal-body">
+                <h2 id="modalTitle"></h2>
+                <div id="modalContent"></div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <style>
+        /* Blog Modal Styles */
+        .blog-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 10000;
+            backdrop-filter: blur(10px);
+            overflow-y: auto;
+        }
+
+        .blog-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .blog-modal-content {
+            background: var(--white);
+            border-radius: 20px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideUp 0.3s ease;
+        }
+
+        .blog-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.1);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--dark);
+            transition: all 0.3s ease;
+            z-index: 10001;
+        }
+
+        .blog-modal-close:hover {
+            background: var(--primary-green);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .blog-modal-header {
+            position: relative;
+        }
+
+        .blog-modal-header img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .blog-modal-meta {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+        }
+
+        .modal-category {
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .modal-meta-info {
+            display: flex;
+            gap: 20px;
+            color: var(--white);
+            font-size: 0.9rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-meta-info i {
+            color: var(--primary-green);
+        }
+
+        .blog-modal-body {
+            padding: 40px;
+        }
+
+        .blog-modal-body h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .blog-modal-body p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .blog-modal-body h3 {
+            color: var(--primary-green);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 30px 0 15px 0;
+        }
+
+        .blog-modal-body ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .blog-modal-body li {
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .blog-modal-content:hover {
+            animation: none;
+        }
+
+        .blog-modal-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(80, 200, 120, 0.1), rgba(139, 69, 19, 0.1));
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .blog-modal-content {
+                margin: 10px;
+                max-height: 95vh;
+            }
+
+            .blog-modal-body {
+                padding: 20px;
+            }
+
+            .blog-modal-body h2 {
+                font-size: 1.5rem;
+            }
+
+            .blog-modal-header img {
+                height: 200px;
+            }
+        }
+    </style>
 
     <!-- Footer -->
     <footer class="footer">
@@ -365,26 +838,7 @@
             });
         });
 
-        // FAQ functionality
-        const faqItems = document.querySelectorAll('.faq-item');
 
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            
-            question.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-                
-                // Close all FAQ items
-                faqItems.forEach(faq => {
-                    faq.classList.remove('active');
-                });
-                
-                // Open clicked item if it wasn't active
-                if (!isActive) {
-                    item.classList.add('active');
-                }
-            });
-        });
 
         // Scroll animations
         const animateElements = document.querySelectorAll('.animate-on-scroll');
@@ -427,6 +881,296 @@
                     });
                 }
             });
+        });
+
+        // Blog Modal Data
+        const blogData = {
+            'bsf-larvae-1': {
+                title: 'Premium Black Soldier Fly Larvae: The Future of Sustainable Protein',
+                category: 'Sustainability',
+                date: 'September 4, 2024',
+                author: 'Ustawi Team',
+                image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                content: `
+                    <p>Black Soldier Fly larvae (BSFL) represent a revolutionary breakthrough in sustainable protein production. These remarkable insects are transforming the agricultural landscape by providing a highly efficient, environmentally friendly alternative to traditional protein sources.</p>
+
+                    <h3>Why BSFL is Superior to Traditional Protein Sources</h3>
+                    <p>Our premium BSFL contains high protein content, making it one of the most protein-dense feed ingredients available. Unlike traditional protein sources like fishmeal or soybean meal, BSFL production requires:</p>
+                    <ul>
+                        <li>Significantly less land than conventional livestock</li>
+                        <li>Minimal water compared to traditional protein production</li>
+                        <li>Zero antibiotics or growth hormones</li>
+                        <li>Minimal greenhouse gas emissions</li>
+                    </ul>
+
+                    <h3>Nutritional Benefits</h3>
+                    <p>BSFL provides a complete amino acid profile, essential fatty acids, and important minerals like calcium and phosphorus. Studies show that animals fed BSFL demonstrate:</p>
+                    <ul>
+                        <li>Improved growth rates and performance</li>
+                        <li>Better feed conversion ratios</li>
+                        <li>Enhanced immune system function</li>
+                        <li>Reduced mortality rates</li>
+                    </ul>
+
+                    <h3>Economic Impact</h3>
+                    <p>Farmers using our BSFL report significant cost savings and improved efficiency. Feed costs are substantially reduced while maintaining or improving animal performance. The return on investment is typically achieved quickly.</p>
+
+                    <p>Join the protein revolution today and discover why leading farmers worldwide are switching to sustainable BSFL for their livestock nutrition needs.</p>
+                `
+            },
+            'frass-fertilizer-1': {
+                title: 'Organic Frass: Nature\'s Perfect Fertilizer for Maximum Yields',
+                category: 'Agriculture',
+                date: 'September 4, 2024',
+                author: 'Ustawi Team',
+                image: '../assets/blog/IMG-20250904-WA0007.jpg',
+                content: `
+                    <p>Organic frass, the excrement of Black Soldier Fly larvae, is revolutionizing sustainable agriculture as nature's most complete fertilizer. This remarkable organic amendment provides everything your crops need for explosive growth while healing the soil ecosystem.</p>
+
+                    <h3>Superior Nutrient Profile</h3>
+                    <p>Our organic frass contains the perfect balance of nutrients that plants crave:</p>
+                    <ul>
+                        <li>NPK ratio optimized for plant growth</li>
+                        <li>Over 17 essential micronutrients</li>
+                        <li>Beneficial microorganisms and enzymes</li>
+                        <li>Slow-release organic matter</li>
+                        <li>Natural growth hormones and amino acids</li>
+                    </ul>
+
+                    <h3>Proven Results</h3>
+                    <p>Independent field trials consistently show remarkable improvements:</p>
+                    <ul>
+                        <li>Significant increase in crop yields</li>
+                        <li>Substantial improvement in soil water retention</li>
+                        <li>Enhanced soil structure and aeration</li>
+                        <li>Increased beneficial microbial activity</li>
+                        <li>Reduced need for chemical inputs</li>
+                    </ul>
+
+                    <h3>Environmental Benefits</h3>
+                    <p>Unlike synthetic fertilizers, frass improves soil health over time. It doesn't cause soil acidification, groundwater contamination, or harmful runoff. Instead, it builds soil organic matter and creates a thriving ecosystem that supports long-term productivity.</p>
+
+                    <h3>Application and Results</h3>
+                    <p>Apply frass at recommended rates for optimal results. Most farmers see visible improvements within weeks of application. The slow-release nature ensures consistent nutrition throughout the growing season.</p>
+
+                    <p>Experience the power of nature's perfect fertilizer and join thousands of farmers achieving record yields with our premium organic frass.</p>
+                `
+            },
+            'bsf-oil-1': {
+                title: 'Revolutionary BSF Oil: Premium Biodiesel & Industrial Applications',
+                category: 'Innovation',
+                date: 'September 4, 2024',
+                author: 'Ustawi Team',
+                image: '../assets/blog/IMG-20250904-WA0008.jpg',
+                content: `
+                    <p>Black Soldier Fly oil represents the next frontier in sustainable energy and industrial applications. Our premium BSF oil offers superior performance characteristics while providing an environmentally responsible alternative to traditional oils.</p>
+
+                    <h3>Superior Fatty Acid Profile</h3>
+                    <p>BSF oil contains an optimal blend of fatty acids that make it ideal for multiple applications:</p>
+                    <ul>
+                        <li>High lauric acid content (similar to coconut oil)</li>
+                        <li>Excellent oxidative stability</li>
+                        <li>Low viscosity for easy processing</li>
+                        <li>High energy density for fuel applications</li>
+                    </ul>
+
+                    <h3>Biodiesel Applications</h3>
+                    <p>Our BSF oil produces high-quality biodiesel with exceptional properties:</p>
+                    <ul>
+                        <li>Clean burning with reduced emissions</li>
+                        <li>Excellent cold weather performance</li>
+                        <li>Compatible with existing diesel engines</li>
+                        <li>Biodegradable and non-toxic</li>
+                        <li>Carbon-negative production process</li>
+                    </ul>
+
+                    <h3>Industrial and Cosmetic Uses</h3>
+                    <p>The versatility of BSF oil extends beyond fuel:</p>
+                    <ul>
+                        <li>Premium lubricants and hydraulic fluids</li>
+                        <li>Cosmetic and personal care products</li>
+                        <li>Soap and detergent manufacturing</li>
+                        <li>Food-grade applications (where approved)</li>
+                    </ul>
+
+                    <h3>Environmental Impact</h3>
+                    <p>BSF oil production creates a positive environmental impact by converting organic waste into valuable energy. Our process sequesters carbon while producing clean, renewable oil that reduces dependence on fossil fuels.</p>
+
+                    <p>Partner with us to access premium BSF oil and join the sustainable energy revolution that's transforming industries worldwide.</p>
+                `
+            },
+            'organic-manure-1': {
+                title: 'Premium Organic Manure: Soil Health Revolution for Modern Farmers',
+                category: 'Environment',
+                date: 'September 4, 2024',
+                author: 'Ustawi Team',
+                image: '../assets/blog/IMG-20250904-WA0009.jpg',
+                content: `
+                    <p>Our premium organic manure represents the pinnacle of soil health technology, combining traditional composting wisdom with modern scientific understanding to create the ultimate soil amendment for sustainable agriculture.</p>
+
+                    <h3>Superior Composition</h3>
+                    <p>Our organic manure is carefully composted from premium organic materials:</p>
+                    <ul>
+                        <li>High-quality animal manures from grass-fed livestock</li>
+                        <li>Organic plant residues and agricultural waste</li>
+                        <li>Beneficial microorganisms and enzymes</li>
+                        <li>Balanced carbon-to-nitrogen ratio</li>
+                        <li>Optimal moisture and pH levels</li>
+                    </ul>
+
+                    <h3>Soil Health Benefits</h3>
+                    <p>Transform your soil ecosystem with measurable improvements:</p>
+                    <ul>
+                        <li>Significantly increases organic matter content</li>
+                        <li>Substantially improves water retention capacity</li>
+                        <li>Enhances soil structure and aeration</li>
+                        <li>Boosts beneficial microbial populations</li>
+                        <li>Provides long-term slow-release nutrition</li>
+                    </ul>
+
+                    <h3>Crop Performance Results</h3>
+                    <p>Independent field trials demonstrate consistent improvements:</p>
+                    <ul>
+                        <li>Significant increase in crop yields</li>
+                        <li>Enhanced root development and plant vigor</li>
+                        <li>Improved resistance to drought and disease</li>
+                        <li>Better nutrient uptake efficiency</li>
+                        <li>Extended harvest periods</li>
+                    </ul>
+
+                    <h3>Quality Assurance</h3>
+                    <p>Every batch of our organic manure undergoes rigorous quality control:</p>
+                    <ul>
+                        <li>Pathogen-free certification</li>
+                        <li>Heavy metal testing</li>
+                        <li>Nutrient analysis verification</li>
+                        <li>Organic certification compliance</li>
+                        <li>Consistent particle size and moisture content</li>
+                    </ul>
+
+                    <h3>Application Guidelines</h3>
+                    <p>Apply at recommended rates for optimal results. Best applied before planting or as a top dressing during the growing season. Compatible with all crop types and farming systems.</p>
+
+                    <p>Invest in your soil's future with our premium organic manure and experience the difference that quality makes in sustainable agriculture.</p>
+                `
+            },
+            'bsf-farming-1': {
+                title: 'Sustainable BSF Farming: From Waste to Wealth in 14 Days',
+                category: 'Agriculture',
+                date: 'September 4, 2024',
+                author: 'Ustawi Team',
+                image: '../assets/blog/IMG-20250904-WA0010.jpg',
+                content: `
+                    <p>Black Soldier Fly farming represents one of the most efficient and profitable forms of sustainable agriculture available today. Our proven system transforms organic waste into valuable products in just 14 days, creating multiple revenue streams for farmers.</p>
+
+                    <h3>The BSF Farming Cycle</h3>
+                    <p>Our streamlined process maximizes efficiency and profitability:</p>
+                    <ul>
+                        <li>Day 1-3: Egg collection and hatching setup</li>
+                        <li>Day 4-10: Rapid larval growth and feeding</li>
+                        <li>Day 11-12: Pre-pupae harvesting</li>
+                        <li>Day 13-14: Processing and packaging</li>
+                        <li>Continuous cycle with overlapping batches</li>
+                    </ul>
+
+                    <h3>Investment Requirements</h3>
+                    <p>Start your BSF farming operation with minimal capital:</p>
+                    <ul>
+                        <li>Affordable initial setup depending on scale</li>
+                        <li>Space requirement: 10-50 square meters</li>
+                        <li>Basic equipment and breeding stock included</li>
+                        <li>Training and ongoing support provided</li>
+                        <li>Quick return on investment typically achieved</li>
+                    </ul>
+
+                    <h3>Revenue Potential</h3>
+                    <p>Multiple income streams from a single operation:</p>
+                    <ul>
+                        <li>Fresh larvae - premium protein source</li>
+                        <li>Dried larvae - value-added product</li>
+                        <li>Organic frass - high-quality fertilizer</li>
+                        <li>BSF oil - sustainable energy source</li>
+                        <li>Excellent monthly revenue potential per system</li>
+                    </ul>
+
+                    <h3>Success Factors</h3>
+                    <p>Key elements for profitable BSF farming:</p>
+                    <ul>
+                        <li>Consistent waste supply and quality</li>
+                        <li>Proper temperature and humidity control</li>
+                        <li>Regular monitoring and maintenance</li>
+                        <li>Market development for products</li>
+                        <li>Continuous learning and optimization</li>
+                    </ul>
+
+                    <h3>Support and Training</h3>
+                    <p>We provide comprehensive support to ensure your success:</p>
+                    <ul>
+                        <li>3-day hands-on training program</li>
+                        <li>Complete setup and installation</li>
+                        <li>Monthly follow-up and troubleshooting</li>
+                        <li>Market linkage and buyer connections</li>
+                        <li>Ongoing technical support via WhatsApp</li>
+                    </ul>
+
+                    <p>Start your journey to sustainable wealth creation with BSF farming. Contact us today to learn how you can transform waste into profit in just 14 days.</p>
+                `
+            }
+        };
+
+        // Blog Modal Functions
+        function openBlogModal(blogId) {
+            const modal = document.getElementById('blogModal');
+            const data = blogData[blogId];
+
+            if (!data) {
+                console.error('Blog data not found for ID:', blogId);
+                return;
+            }
+
+            // Add loading state
+            modal.style.display = 'flex';
+            modal.style.opacity = '0';
+
+            // Populate modal content
+            document.getElementById('modalImage').src = data.image;
+            document.getElementById('modalCategory').textContent = data.category;
+            document.getElementById('modalDate').innerHTML = `<i class="fas fa-calendar"></i> ${data.date}`;
+            document.getElementById('modalAuthor').innerHTML = `<i class="fas fa-user"></i> ${data.author}`;
+            document.getElementById('modalTitle').textContent = data.title;
+            document.getElementById('modalContent').innerHTML = data.content;
+
+            // Show modal with animation
+            setTimeout(() => {
+                modal.classList.add('active');
+                modal.style.opacity = '1';
+                document.body.style.overflow = 'hidden';
+            }, 50);
+        }
+
+        function closeBlogModal() {
+            const modal = document.getElementById('blogModal');
+            modal.style.opacity = '0';
+
+            setTimeout(() => {
+                modal.classList.remove('active');
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
+
+        // Close modal on background click
+        document.getElementById('blogModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeBlogModal();
+            }
+        });
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeBlogModal();
+            }
         });
     </script>
 </body>

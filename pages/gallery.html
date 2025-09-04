@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Ustawi Organic Farms</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Gallery Specific Styles */
+        .gallery-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--cream), #f0f8f0);
+            min-height: 100vh;
+        }
+
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .gallery-header h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary-green), var(--brown));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gallery-header p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .gallery-filter-btn {
+            padding: 12px 30px;
+            border: 2px solid var(--primary-green);
+            background: transparent;
+            color: var(--primary-green);
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .gallery-filter-btn:hover::before {
+            left: 100%;
+        }
+
+        .gallery-filter-btn.active,
+        .gallery-filter-btn:hover {
+            background: var(--primary-green);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(80, 200, 120, 0.3);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: var(--white);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(80, 200, 120, 0.9), rgba(139, 69, 19, 0.9));
+            opacity: 0;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay-content {
+            text-align: center;
+            color: var(--white);
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay-content {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .gallery-overlay p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .gallery-zoom-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid var(--white);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .gallery-zoom-btn:hover {
+            background: var(--white);
+            color: var(--primary-green);
+            transform: scale(1.1);
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            backdrop-filter: blur(10px);
+        }
+
+        .lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            animation: zoomIn 0.3s ease;
+        }
+
+        .lightbox img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            background: var(--white);
+            color: var(--dark);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            background: var(--primary-green);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid var(--white);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .lightbox-nav:hover {
+            background: var(--white);
+            color: var(--primary-green);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .lightbox-prev {
+            left: -80px;
+        }
+
+        .lightbox-next {
+            right: -80px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered Animation */
+        .gallery-item:nth-child(1) { animation-delay: 0.1s; }
+        .gallery-item:nth-child(2) { animation-delay: 0.2s; }
+        .gallery-item:nth-child(3) { animation-delay: 0.3s; }
+        .gallery-item:nth-child(4) { animation-delay: 0.4s; }
+        .gallery-item:nth-child(5) { animation-delay: 0.5s; }
+        .gallery-item:nth-child(6) { animation-delay: 0.6s; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+            
+            .gallery-item img {
+                height: 250px;
+            }
+            
+            .lightbox-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-content">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +254 123 456 789</span>
+                    <span><i class="fas fa-envelope"></i> info@ustawiorganicfarms.com</span>
+                </div>
+            </div>
+            <ul class="social-icons">
+                <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.jpg" alt="Ustawi Logo">
+            </a>
+            <div class="mobile-menu-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="./about.html" class="nav-link">About</a></li>
+                <li><a href="./services.html" class="nav-link">Services</a></li>
+                <li><a href="./product.html" class="nav-link">Products</a></li>
+                <li><a href="./gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="./blog.html" class="nav-link">Blog</a></li>
+                <li><a href="./faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="./contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1 class="page-title">Our Gallery</h1>
+            <div class="page-breadcrumb">
+                <a href="../index.html">Home</a> / Gallery
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="gallery-container">
+            <div class="gallery-header animate-on-scroll">
+                <h2>Visual Journey Through Sustainable Innovation</h2>
+                <p>Explore our farm operations, products, and the amazing transformation from organic waste to valuable resources through our Black Soldier Fly technology.</p>
+            </div>
+
+            <div class="gallery-filters animate-on-scroll">
+                <button class="gallery-filter-btn active" data-filter="all">All Images</button>
+                <button class="gallery-filter-btn" data-filter="bsf-larvae">BSF Larvae</button>
+                <button class="gallery-filter-btn" data-filter="frass">Organic Frass</button>
+                <button class="gallery-filter-btn" data-filter="farming">Farm Operations</button>
+                <button class="gallery-filter-btn" data-filter="products">Products</button>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item animate-on-scroll" data-category="bsf-larvae">
+                    <img src="../assets/blog/IMG-20250904-WA0006.jpg" alt="Premium Black Soldier Fly Larvae">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Premium BSF Larvae</h3>
+                            <p>High-protein sustainable feed solution</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(0)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item animate-on-scroll" data-category="frass">
+                    <img src="../assets/blog/IMG-20250904-WA0007.jpg" alt="Organic Frass Fertilizer">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Organic Frass Fertilizer</h3>
+                            <p>Nature's perfect fertilizer for maximum yields</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(1)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item animate-on-scroll" data-category="products">
+                    <img src="../assets/blog/IMG-20250904-WA0008.jpg" alt="BSF Oil Production">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>BSF Oil Production</h3>
+                            <p>Premium biodiesel & industrial applications</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(2)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item animate-on-scroll" data-category="frass">
+                    <img src="../assets/blog/IMG-20250904-WA0009.jpg" alt="Premium Organic Manure">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Premium Organic Manure</h3>
+                            <p>Soil health revolution for modern farmers</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(3)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item animate-on-scroll" data-category="farming">
+                    <img src="../assets/blog/IMG-20250904-WA0010.jpg" alt="BSF Farming Process">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>BSF Farming Process</h3>
+                            <p>From waste to wealth in 14 days</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(4)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item animate-on-scroll" data-category="farming">
+                    <img src="../assets/blog/IMG-20250904-WA0011.jpg" alt="Waste Management Solutions">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Waste Management Solutions</h3>
+                            <p>Turn trash into cash with BSF technology</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(5)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item animate-on-scroll" data-category="bsf-larvae">
+                    <img src="../assets/blog/IMG-20250904-WA0012.jpg" alt="Sustainable Protein Production">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Sustainable Protein Production</h3>
+                            <p>Feed the future with BSF larvae</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(6)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item animate-on-scroll" data-category="frass">
+                    <img src="../assets/blog/IMG-20250904-WA0013.jpg" alt="Organic Fertilizer Benefits">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Organic Fertilizer Benefits</h3>
+                            <p>Boost yields while protecting environment</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(7)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item animate-on-scroll" data-category="farming">
+                    <img src="../assets/blog/IMG-20250904-WA0014.jpg" alt="Smart Farming Innovation">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Smart Farming Innovation</h3>
+                            <p>Technology meets sustainability</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(8)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 10 -->
+                <div class="gallery-item animate-on-scroll" data-category="farming">
+                    <img src="../assets/blog/IMG-20250904-WA0015.jpg" alt="Circular Economy Model">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Circular Economy Model</h3>
+                            <p>Zero waste, maximum value creation</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(9)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 11 -->
+                <div class="gallery-item animate-on-scroll" data-category="bsf-larvae">
+                    <img src="../assets/blog/IMG-20250904-WA0016.jpg" alt="Premium Larvae Processing">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Premium Larvae Processing</h3>
+                            <p>Quality control for superior products</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(10)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 12 -->
+                <div class="gallery-item animate-on-scroll" data-category="frass">
+                    <img src="../assets/blog/IMG-20250904-WA0017.jpg" alt="Soil Enhancement Solutions">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Soil Enhancement Solutions</h3>
+                            <p>Regenerative agriculture solutions</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(11)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 13 -->
+                <div class="gallery-item animate-on-scroll" data-category="products">
+                    <img src="../assets/blog/IMG-20250904-WA0018.jpg" alt="Sustainable Feed Solutions">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Sustainable Feed Solutions</h3>
+                            <p>Optimize animal performance naturally</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(12)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 14 -->
+                <div class="gallery-item animate-on-scroll" data-category="farming">
+                    <img src="../assets/blog/IMG-20250904-WA0019.jpg" alt="Organic Waste Transformation">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Organic Waste Transformation</h3>
+                            <p>From problem to profit in days</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(13)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 15 -->
+                <div class="gallery-item animate-on-scroll" data-category="farming">
+                    <img src="../assets/blog/IMG-20250904-WA0020.jpg" alt="Sustainable Agriculture Practices">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Sustainable Agriculture Practices</h3>
+                            <p>Profitable farming for the future</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(14)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 16 -->
+                <div class="gallery-item animate-on-scroll" data-category="frass">
+                    <img src="../assets/blog/IMG-20250904-WA0021.jpg" alt="Premium Frass Applications">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Premium Frass Applications</h3>
+                            <p>Unlock maximum crop potential</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(15)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 17 -->
+                <div class="gallery-item animate-on-scroll" data-category="farming">
+                    <img src="../assets/blog/IMG-20250904-WA0022.jpg" alt="Innovative Farming Technology">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Innovative Farming Technology</h3>
+                            <p>Automation meets sustainability</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(16)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 18 -->
+                <div class="gallery-item animate-on-scroll" data-category="products">
+                    <img src="../assets/blog/IMG-20250904-WA0023.jpg" alt="Organic Certification Success">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Organic Certification Success</h3>
+                            <p>Premium markets, premium profits</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(17)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 19 -->
+                <div class="gallery-item animate-on-scroll" data-category="farming">
+                    <img src="../assets/blog/IMG-20250904-WA0024.jpg" alt="Environmental Impact Solutions">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Environmental Impact Solutions</h3>
+                            <p>Carbon negative farming systems</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(18)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 20 -->
+                <div class="gallery-item animate-on-scroll" data-category="products">
+                    <img src="../assets/blog/IMG-20250904-WA0025.jpg" alt="Success Stories and Results">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Success Stories and Results</h3>
+                            <p>Real farmers, real results, real profits</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(19)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 21 -->
+                <div class="gallery-item animate-on-scroll" data-category="farming">
+                    <img src="../assets/blog/IMG-20250904-WA0026.jpg" alt="Training and Support Programs">
+                    <div class="gallery-overlay">
+                        <div class="gallery-overlay-content">
+                            <h3>Training and Support Programs</h3>
+                            <p>Master sustainable farming techniques</p>
+                            <button class="gallery-zoom-btn" onclick="openLightbox(20)">
+                                <i class="fas fa-search-plus"></i> View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-nav lightbox-prev" onclick="prevImage()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav lightbox-next" onclick="nextImage()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <img id="lightboxImage" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./product.html">Products</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Organic Waste Management</a></li>
+                        <li><a href="#">BSF Larvae Production</a></li>
+                        <li><a href="#">Organic Fertilizer</a></li>
+                        <li><a href="#">Sustainable Protein</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +254 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> info@ustawiorganicfarms.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" style="color: var(--primary-green); font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: var(--primary-green); font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: var(--primary-green); font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: var(--primary-green); font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ustawi Organic Farms. All rights reserved. | Designed with 💚 for sustainability</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gallery images array
+        const galleryImages = [
+            { src: '../assets/blog/IMG-20250904-WA0006.jpg', alt: 'Premium Black Soldier Fly Larvae' },
+            { src: '../assets/blog/IMG-20250904-WA0007.jpg', alt: 'Organic Frass Fertilizer' },
+            { src: '../assets/blog/IMG-20250904-WA0008.jpg', alt: 'BSF Oil Production' },
+            { src: '../assets/blog/IMG-20250904-WA0009.jpg', alt: 'Premium Organic Manure' },
+            { src: '../assets/blog/IMG-20250904-WA0010.jpg', alt: 'BSF Farming Process' },
+            { src: '../assets/blog/IMG-20250904-WA0011.jpg', alt: 'Waste Management Solutions' },
+            { src: '../assets/blog/IMG-20250904-WA0012.jpg', alt: 'Sustainable Protein Production' },
+            { src: '../assets/blog/IMG-20250904-WA0013.jpg', alt: 'Organic Fertilizer Benefits' },
+            { src: '../assets/blog/IMG-20250904-WA0014.jpg', alt: 'Smart Farming Innovation' },
+            { src: '../assets/blog/IMG-20250904-WA0015.jpg', alt: 'Circular Economy Model' },
+            { src: '../assets/blog/IMG-20250904-WA0016.jpg', alt: 'Premium Larvae Processing' },
+            { src: '../assets/blog/IMG-20250904-WA0017.jpg', alt: 'Soil Enhancement Solutions' },
+            { src: '../assets/blog/IMG-20250904-WA0018.jpg', alt: 'Sustainable Feed Solutions' },
+            { src: '../assets/blog/IMG-20250904-WA0019.jpg', alt: 'Organic Waste Transformation' },
+            { src: '../assets/blog/IMG-20250904-WA0020.jpg', alt: 'Sustainable Agriculture Practices' },
+            { src: '../assets/blog/IMG-20250904-WA0021.jpg', alt: 'Premium Frass Applications' },
+            { src: '../assets/blog/IMG-20250904-WA0022.jpg', alt: 'Innovative Farming Technology' },
+            { src: '../assets/blog/IMG-20250904-WA0023.jpg', alt: 'Organic Certification Success' },
+            { src: '../assets/blog/IMG-20250904-WA0024.jpg', alt: 'Environmental Impact Solutions' },
+            { src: '../assets/blog/IMG-20250904-WA0025.jpg', alt: 'Success Stories and Results' },
+            { src: '../assets/blog/IMG-20250904-WA0026.jpg', alt: 'Training and Support Programs' }
+        ];
+
+        let currentImageIndex = 0;
+
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+
+        // Gallery filter functionality
+        const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                galleryItems.forEach((item, index) => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0) scale(1)';
+                        }, index * 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px) scale(0.9)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Lightbox functionality
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+
+            lightboxImage.src = galleryImages[index].src;
+            lightboxImage.alt = galleryImages[index].alt;
+            lightbox.classList.add('active');
+
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = galleryImages[currentImageIndex].src;
+            lightboxImage.alt = galleryImages[currentImageIndex].alt;
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            const lightboxImage = document.getElementById('lightboxImage');
+            lightboxImage.src = galleryImages[currentImageIndex].src;
+            lightboxImage.alt = galleryImages[currentImageIndex].alt;
+        }
+
+        // Close lightbox on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+            } else if (e.key === 'ArrowLeft') {
+                prevImage();
+            }
+        });
+
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Scroll animations
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animated');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        // Initialize animations on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            animateOnScroll();
+
+            // Staggered animation for gallery items
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            galleryItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
