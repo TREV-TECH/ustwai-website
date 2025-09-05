@@ -1,0 +1,22 @@
+# Robots.txt for Ustawi Organic Farms
+# https://ustawiorganics.org/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow access to admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Allow access to CSS and JS files for proper rendering
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://ustawiorganics.org/sitemap.xml
+
+# Crawl-delay (optional - helps prevent server overload)
+Crawl-delay: 1
