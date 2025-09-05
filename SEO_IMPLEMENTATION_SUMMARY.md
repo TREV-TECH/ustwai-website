@@ -55,7 +55,7 @@ Comprehensive SEO optimization has been implemented across all pages of the Usta
 
 ### Location-Based Keywords
 - Sustainable agriculture Kenya
-- Organic farming Nairobi
+- Organic farming Kisumu
 - Waste management Kenya
 - BSF technology Kenya
 
