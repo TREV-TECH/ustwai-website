@@ -108,6 +108,8 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      media="print"
+      onload="this.media='all'"
     />
     <link rel="stylesheet" href="./css/style.css" />
 
@@ -228,8 +230,8 @@
     <!-- Navigation -->
     <nav class="navbar">
       <div class="nav-container">
-        <a href="../index.html" class="logo">
-          <img src="../assets/images/logo.jpg" alt="Ustawi Logo" />
+        <a href="./index.html" class="logo">
+          <img src="./assets//images//logo.jpg" alt="Ustawi Logo" />
         </a>
         <div class="mobile-menu-toggle" id="mobileToggle">
           <span></span>
@@ -258,21 +260,22 @@
       <div class="hero-carousel">
         <div class="hero-slide active">
           <img
-            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2089&q=80"
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=75"
             alt="Organic farming field with green crops - sustainable agriculture at Ustawi Organic Farms"
-            loading="lazy"
+            loading="eager"
+            fetchpriority="high"
           />
         </div>
         <div class="hero-slide">
           <img
-            src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=75"
             alt="Sustainable agriculture practices and eco-friendly farming methods"
             loading="lazy"
           />
         </div>
         <div class="hero-slide">
           <img
-            src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2089&q=80"
+            src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=75"
             alt="Black Soldier Fly larvae for sustainable protein production and waste management"
             loading="lazy"
           />
@@ -288,8 +291,8 @@
             sustainable produce that nourishes both body and soul.
           </p>
           <div class="hero-buttons">
-            <a href="./pages/product.html" class="btn btn-primary">
-              View Products
+            <a href="./pages/products-services.html" class="btn btn-primary">
+              View Products and Services
               <i class="fas fa-arrow-right"></i>
             </a>
             <a href="./pages/contact.html" class="btn btn-secondary">
@@ -305,7 +308,7 @@
     <section class="video-section">
       <div class="video-container">
         <div class="video-wrapper animate-on-scroll">
-          <video autoplay muted loop>
+          <video autoplay muted loop playsinline preload="metadata">
             <source src="./assets/vid.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -327,9 +330,11 @@
           <div class="product-card animate-on-scroll">
             <div class="product-image">
               <img
-                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=75"
                 alt="Black Soldier Fly larvae protein - sustainable insect protein for animal feed"
                 loading="lazy"
+                width="600"
+                height="400"
               />
             </div>
             <div class="product-content">
@@ -348,9 +353,11 @@
           <div class="product-card animate-on-scroll">
             <div class="product-image">
               <img
-                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=75"
                 alt="Organic frass fertilizer - natural NPK fertilizer from Black Soldier Fly waste"
                 loading="lazy"
+                width="600"
+                height="400"
               />
             </div>
             <div class="product-content">
@@ -369,9 +376,11 @@
           <div class="product-card animate-on-scroll">
             <div class="product-image">
               <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=75"
                 alt="BSFL oil - high-value oil from Black Soldier Fly larvae with antimicrobial properties"
                 loading="lazy"
+                width="600"
+                height="400"
               />
             </div>
             <div class="product-content">
@@ -487,15 +496,17 @@
             <h3>Quick Links</h3>
 
             <ul>
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="./about.html">About</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./pages/about.html">About</a></li>
               <li>
-                <a href="./products-services.html">Products & Services</a>
+                <a href="./pages//products-services.html"
+                  >Products & Services</a
+                >
               </li>
-              <li><a href="./gallery.html">Gallery</a></li>
-              <li><a href="./blog.html">Blog</a></li>
+              <li><a href="./pages/gallery.html">Gallery</a></li>
+              <li><a href="./pages/blog.html">Blog</a></li>
               <li><a href="./pages/faq.html">FAQ</a></li>
-              <li><a href="./contact.html">Contact</a></li>
+              <li><a href="./pages/contact.html">Contact</a></li>
             </ul>
           </div>
           <div class="footer-section">
@@ -534,12 +545,12 @@
     </footer>
 
     <script>
-      // Loading screen
-      window.addEventListener("load", function () {
+      // Loading screen - reduced timeout
+      window.addEventListener("DOMContentLoaded", function () {
         const loading = document.getElementById("loading");
         setTimeout(() => {
           loading.classList.add("hidden");
-        }, 1000);
+        }, 300);
       });
 
       // Mobile menu toggle

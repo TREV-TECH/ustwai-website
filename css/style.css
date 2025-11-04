@@ -416,9 +416,10 @@ body {
 }
 
 .video-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
 }
 
 .video-header {
@@ -2258,7 +2259,10 @@ body {
   }
 
   .video-wrapper video {
-    height: 250px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
   }
 
   .products-grid,
