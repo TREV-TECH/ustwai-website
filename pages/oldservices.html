@@ -146,6 +146,43 @@
         }
       }
     </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://ustawiorganics.org/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://ustawiorganics.org/pages/services.html"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Analytics (Replace GA_MEASUREMENT_ID with your actual ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+
+    <!-- Google Search Console Verification (Replace with your verification code) -->
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE">
+
+    <!-- Microsoft Bing Webmaster Tools (Replace with your verification code) -->
+    <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE">
   </head>
   <body>
     <!-- Header -->
