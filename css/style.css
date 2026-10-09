@@ -2041,6 +2041,53 @@ body {
   color: rgba(255, 255, 255, 0.7);
 }
 
+/* Legal pages (privacy policy, terms, account deletion) */
+.legal-section {
+  padding: 60px 0 80px;
+  background: var(--white);
+}
+
+.legal-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 20px;
+  line-height: 1.7;
+  color: var(--dark);
+}
+
+.legal-updated {
+  color: var(--gray);
+  margin-bottom: 25px;
+}
+
+.legal-container h2 {
+  font-size: 1.4rem;
+  margin: 35px 0 12px;
+  color: var(--dark-green);
+}
+
+.legal-container p {
+  margin-bottom: 14px;
+}
+
+.legal-container ul {
+  margin: 0 0 14px 22px;
+}
+
+.legal-container li {
+  margin-bottom: 8px;
+}
+
+.legal-container a {
+  color: var(--dark-green);
+  text-decoration: underline;
+}
+
+.footer-bottom a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 /* Utility Classes */
 .loading {
   position: fixed;
